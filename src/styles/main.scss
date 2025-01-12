@@ -1,0 +1,17 @@
+@use "sass:meta";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer swiper {
+  @include meta.load-css("swiper/css");
+  @include meta.load-css("swiper/css/effect-fade");
+  @include meta.load-css("swiper/css/pagination");
+}
+
+@layer components {
+  @include meta.load-css("navigation");
+  @include meta.load-css("components");
+}
+

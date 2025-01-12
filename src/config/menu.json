@@ -1,0 +1,92 @@
+{
+  "main": [
+    {
+      "name": "Who We Are",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "About MRC Nepal",
+          "ulr": "/about-mrc-nepal"
+        },
+        {
+          "name": "Partners",
+          "ulr": "/partner"
+        },
+        {
+          "name": "Contact",
+          "ulr": "/contact"
+        }
+      ]
+    },
+    {
+      "name": "What We Do",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Sustainable Livelihood",
+          "ulr": "/area/sustainable-livelihood"
+        },
+        {
+          "name": "Education and Human Rights",
+          "ulr": "/area/education-and-human-rights"
+        },
+        {
+          "name": "Health and Sanitation",
+          "ulr": "/area/health-and-sanitation"
+        },
+        {
+          "name": "Environment and Biodiversity",
+          "url": "/area/environment-and-biodiversity"
+        },
+        {
+          "name": "Renewable Energy",
+          "url": "renewable-energy"
+        },
+        {
+          "name": "Emergency Response",
+          "url": "/area/emergency-response"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "url": "/projects"
+    },
+    {
+      "name": "Our Impact",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Success Stories",
+          "url": "/success-stories"
+        },
+        {
+          "name": "Publications",
+          "url": "/publications"
+        }
+      ]
+    },
+    {
+      "name": "Get Involved",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Career",
+          "url": "/career"
+        },
+        {
+          "name": "Volunteer",
+          "url": "/volunteer"
+        },
+        {
+          "name": "Fundraise",
+          "url": "/fundraise"
+        }
+      ]
+    }
+  ]
+}

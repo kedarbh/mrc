@@ -1,0 +1,335 @@
+---
+// import 'swiper/css/bundle'
+---
+
+<div class="swiper swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="content" data-content="one">
+                <h2>Slide 1 Title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officiis nesciunt voluptates rem architecto consequuntur fugiat molestias explicabo quas doloremque, inventore excepturi eum, qui, commodi animi! Labore consequuntur similique ab.
+                </p>
+            </div>
+            <div class="background" data-item="one"></div>
+        </div>
+        <div class="swiper-slide">
+            <div class="content" data-content="two">
+                <h2>Slide 2 Title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officiis nesciunt voluptates rem architecto consequuntur fugiat molestias explicabo quas doloremque, inventore excepturi eum, qui, commodi animi! Labore consequuntur similique ab.
+                </p>
+            </div>
+            <div class="background" data-item="two"></div>
+        </div>
+        <div class="swiper-slide">
+            <div class="content" data-content="three">
+                <h2>Slide 3 Title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officiis nesciunt voluptates rem architecto consequuntur fugiat molestias explicabo quas doloremque, inventore excepturi eum, qui, commodi animi! Labore consequuntur similique ab.
+                </p>
+            </div>
+            <div class="background" data-item="three"></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<style>
+    
+
+
+/* @font-face {
+    font-family: 'Quicksand';
+    src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Salsa&display=swap");
+} */
+
+@font-face {
+  font-family: "Aldrich";
+  font-weight: 400;
+  src: url(./fonts/Aldrich-Regular.woff2) format("woff2");
+}
+
+
+
+.swiper-container {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* content */
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 5%;
+    left: 3%;
+    width: 40%;
+    height: max-content;
+    color: #f8f8f5;
+    /* text-align: center; */
+    padding: 20px;
+    opacity: 0;
+    z-index: 2;
+    background: rgba( 21, 12, 12, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.content h2 {
+  font-family: "Aldrich", monospace;
+  font-size: clamp(2rem, 3vw, 4rem);
+  margin-bottom: 10px;
+  opacity: 0
+}
+
+.content p {
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.swiper-slide-active .content {
+  opacity: 1;
+}
+
+.swiper-slide-active .content h2 {
+  animation: moveDown 0.8s ease-in forwards;
+}
+
+.swiper-slide-active .content p {
+  animation: moveDown 1s ease-in forwards;
+  animation-delay: 1s;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* background */
+
+
+.background[data-item="one"] {
+  background: url(./images/cover.jpg);
+  background-size: cover;
+  background-position: 50% 40%;
+
+}
+
+.background[data-item="two"] {
+  background: url(./images/1.jpeg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.background[data-item="three"] {
+  background: url(./images/2.jpg);
+  background-size: cover;
+  background-position: 50% 40%;
+}
+
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* clip-path: circle(75%); */
+  /* filter: brightness(90%); */
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.animation {
+  animation: resizeClipPath 3s ease-in-out forwards;
+}
+
+@keyframes resizeClipPath {
+  0% {
+    /* clip-path: circle(65%); */
+    opacity: .7;
+  }
+  100% {
+    /* clip-path: circle(91%); */
+    opacity: 1;
+  }
+}
+
+
+
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  .content {
+    top: 18%;
+  }
+
+  .content[data-content="two"],
+  .content[data-content="three"] {
+    top: 5%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content,
+  .content[data-content="three"] {
+    top: 55%;
+    left: 2%;
+    width: 60%;
+  }
+
+  .content[data-content="two"] {
+    top: 10%;
+  }
+
+  .content h1 {
+    margin-bottom: 14px;
+  }
+
+  .content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .feature i {
+    font-size: 1.3rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 790px) {
+  .footer {
+    column-gap: 10px;
+  }
+
+  .feature i {
+    font-size: 1.1rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+  }
+
+  .feature small {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 660px) {
+  .content,
+  .content[data-content="two"],
+  .content[data-content="three"] {
+    top: unset;
+    left: 2%;
+    bottom: 3%;
+    width: 80%;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  .background[data-item="two"] {
+    background-position: 40% 50%;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-pagination-bullet-active {
+    height: 24px;
+  }
+
+  
+}
+
+</style>
+
+<script>
+    import Swiper from 'swiper';
+    import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+    // import 'swiper/css/bundle';
+    // import 'swiper/css/navigation';
+    // import 'swiper/css/pagination';
+    // import 'swiper/css/effect-fade';
+
+    const settings = {
+        modules: [Pagination, EffectFade, Autoplay],
+        effect: "fade",
+        fadeEffect: {           
+            crossFade: true     // added(resolve the overlapping of the slides)
+        }, 
+        speed: 10,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            
+            clickable: true,
+            
+        },
+        
+        on: {
+            
+            
+            slideChange: function() {
+                // const slides = document.querySelectorAll(".background");
+            
+                let activeSlide = this.slides[this.activeIndex];
+                console.log(activeSlide);
+                let background = activeSlide.querySelector(".background");
+                if (background) {
+                    background.classList.add("animation");
+                }
+            }
+        }
+    };
+
+    const swiper = new Swiper(".swiper-container",  settings)
+    
+   
+</script>

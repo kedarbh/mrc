@@ -1,5 +1,11 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: "https://mrcnepal.org.np",
+  integrations: [tailwind(), sitemap(), icon({ iconDir: "src/assets/icons" })],
+});
