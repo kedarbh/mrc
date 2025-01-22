@@ -1,15 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carousel from '@components/Carousel.astro';
+import About from '@components/home/About.astro';
 import Feature from '@components/home/Feature.astro';
-// import Carousel from '@components/Carousel.astro';
+import Successstory from '@components/home/Successstory.astro';
+import Supporters from '@components/home/Supporters.astro';
+import Volunteer from '@components/home/Volunteer.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
 	<Carousel />
 	<Feature />
-	<div class="h-96 bg-green-600"></div>
+	<About />
+	<Successstory />
+	<Volunteer />
+	<Supporters />
 </Layout>

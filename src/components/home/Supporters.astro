@@ -1,0 +1,35 @@
+---
+
+const donorList = ['UNDP/GEF/SGP-UNOPS','WHO-Stop TB Partnership/CFCS','Tear Fund Uk', 'Stromme Foundation', 'OPEC/OFID','USAID/WWF-Hariyo Ban', 'USAID/DAI-Paani Project', 'Practical Action Nepal', 'GIZ/STPP', 'ABC Nepal', 'Plan International Nepal']
+---
+
+<div class="wrapper section">
+    <div class="max-w-xl ">
+        <p class="subtitle">Our Donors</p>
+        <h2 class="title">Partners in <span>Building</span> Better Futures!</h2>
+        <!-- <h2 class="title">Making a <span>Difference</span> Together!</h2> -->
+    </div>
+    <div class="section grid gap-5 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+        {
+            donorList.map((donor)=> (
+            <div class="border box-outlined  p-6 place-content-center">
+                    <p>{donor}</p>
+                </div>
+            ))
+        }
+    </div>
+    
+    <a href="#" class="btn-outlined">View All Supporters →</a>
+    
+</div>
+
+<style>
+
+
+.donor-logo {
+  text-align: center;
+}
+
+
+
+</style>

@@ -1,0 +1,13 @@
+---
+title: "Liquor Making Drum Used For Making Organic Pesticides In Gairibari Chitwan"
+description: "With proper training and guidance Mrs. Nau Maya Gurung became a dedicated farmer producing off season organic vegetables. Her only income generating activities was to produce liquor in home, which was not appreciated by the community. Now the changes in her work nature has not only changed the purpose of drum to make Geetimaal (organic pesticides), she has transformed herself into a exemplary individual in the community."
+coverImage: "@assets/images/stories/liquor-making-drum-used-for-making-organic-pesticides.webp"
+publishedDate: "2013-02-14T05:35:07.322Z"
+
+---
+
+A 44 years Mrs. Nau Maya Gurung belong to the poor peasant Gurung ethnic group (disadvantaged and Janjati) in habitant of Gairibari, Shaktikhor-4, Chitwan have had no vegetable farming before. Since, May 2012 she has been involving in a vegetable model farm promoted by GIZ/STPP/MRC Nepal. Since then in the early month she planted in about 500m2 area of green vegetables Okra, cucumber, bottle gourd, tomato and bitter gourd. Within 3 months, she started harvesting the tender fruit to satisfy her kitchen requirement and continued harvesting up to November and able to earn worth NPRs.22, 000. She again scaled up the vegetable growing areas of about 3 kattha(1000m2) with tomato, chilly and cabbage.
+
+She started harvesting from November till January and able to earn NRs. 44,225 (except home consumption) through early winter production technologies. Again, the harvesting is continuing. She happily said, this is marvelous for me to meet the need of vegetable in kitchen with sufficient nutrients supplement in food.
+
+Not only herself, but also she provided the surplus green vegetable to the neighbor too. Not only these, her husband who never involved in vegetable before, now with pleasure he involved in the vegetable garden to support his wife. Such type of income they never have had before and with pleasure, they are maintaining better livelihood with dependent children 3 daughters and 1 son from the income of vegetable. With sufficient pleasure including her community she encouraged and motivated to be involved in commercial vegetable farming supported by GIZ/STPP/MRC Nepal. For the plant protection she intensively has been using Jeevatu and Geetimal(organic bio pesticides) and happily expressed “ Local Liquor making drum is converted into Geetimal making drum in Gairibari, Chitwan ”. In Gurung community, local liquor making is so prevalent and now this is lowering down after the introduction of vegetable Model Farm promoted by GIZ/STPP/MRC Nepal.At the end, she committed to expand the vegetable farm at commercial scale in all community members.

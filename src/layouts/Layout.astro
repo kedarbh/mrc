@@ -1,4 +1,5 @@
 ---
+import Footer from "@components/layouts/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import "@styles/main.scss";
 
@@ -10,14 +11,15 @@ import "@styles/main.scss";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
 		<meta name="generator" content={Astro.generator} />
 		<!-- <ClientRouter /> -->
-		<title>Astro Basics</title>
+		<title>MRC Nepal</title>
 	</head>
 	<body>
 		<Navbar/>
 		<slot />
+		<Footer />
 	</body>
 </html>
 

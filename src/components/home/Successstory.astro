@@ -1,0 +1,64 @@
+---
+import StoryCard from '@components/story/StoryCard.astro';
+import { getCollection } from 'astro:content';
+
+const stories = (await getCollection('stories')).sort((a,b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()).slice(0,3);
+
+// console.log(stories)
+
+---
+
+<div class="wrapper section ">
+    <div class="mb-10 max-w-xl">
+        <p class="subtitle">Success Stories</p>
+        <div>
+            <h2 class="title">Stories of <span>change</span> from those we serve</h2>
+            <!-- <h2 class="title">Stories of <span>change</span> from those we serve</h2> -->
+        </div>
+    </div>
+    
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 md:gap-10 gap-6"
+    >
+      <!-- Card 1 -->
+       {
+        stories.map((story) => (
+          <StoryCard {story} />
+        ))
+       }
+      
+
+      
+      
+
+      <!-- Card 3 -->
+      <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="relative">
+            <Image src={hathani} alt="Hathani packing vegetables from her field"/>
+            <div
+            class="absolute top-2 left-2 bg-primary/80 text-white text-center text-sm font-bold px-3 py-1 rounded-lg"
+          >
+            <p class="title">10</p>
+            <p class="text-xs">FEBRUARY</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <span
+            class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded"
+            >POOR</span
+          >
+          <h3 class="mt-2 text-lg font-bold text-gray-800">
+            Donation is Hope for Poor Childrens.
+          </h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Contrary to popular belief, Lorem Ipsum is not simply...
+          </p>
+        </div>
+      </div> -->
+    </div>
+    <div class="section">
+        <a href="/success-stories" class=" btn-outlined">View All stories &rarr;</a>
+    </div>
+    
+</div>

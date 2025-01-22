@@ -13,5 +13,6 @@
 @layer components {
   @include meta.load-css("navigation");
   @include meta.load-css("components");
+  @include meta.load-css("buttons");
 }
 

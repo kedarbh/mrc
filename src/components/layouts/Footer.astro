@@ -1,0 +1,68 @@
+---
+import Social from "./Social.astro";
+import { Icon } from 'astro-icon/components';
+
+
+---
+
+<footer class="mt-12 footer bg-primary/20">
+    <div class="py-10 grid grid-cols-1 md:grid-cols-3 gap-2 items-center justify-between wrapper">
+      <div class="">
+        <div class="flex items-center space-x-4">
+          <img src="../images/logo.svg" alt="" class="h-20" />
+          <div>
+            <h2 class="font-bold">MRC Nepal</h2>
+            <p class="text-xs">Facilitating for Self-Reliant Society</p>
+            <Social />
+          </div>
+        </div>
+      </div>
+      <div class="text-xs">
+        <div>
+          <p class="font-bold py-2">
+            <span class="border-b py-1 border-primary">Head Office:</span>
+          </p>
+          <p>Dhapasi-1, Kathmandu</p>
+        </div>
+        <div>
+          <p class="font-bold py-2">
+            <span class="border-b py-1 border-primary">
+              Operational Office:
+            </span>
+          </p>
+          <p>87, Birendra Path, Huprachaur</p>
+          <p>Hetauda, Makawanpur</p>
+          <p>P.O.Box 80 Nepal</p>
+        </div>
+      </div>
+      <div class="">
+        <div>
+          <div class="mt-4 flex items-center space-x-6">
+            <div class="flex items-center justify-center h-8 w-8 rounded-md bg-primary">
+                <Icon name="phone" class="h-6 w-6 text-white"/>
+              
+            </div>
+            <div class="text-xs leading-tight">
+              <p>+977 (1) 4375024</p>
+              <p>+977 (57) 526651</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-6">
+            <div class="mt-1 flex items-center justify-center h-8 w-8 rounded-md bg-primary">
+                <Icon name="email" class="h-6 w-6 text-white"/>
+              
+            </div>
+            <p class="text-sm">info@mrcnepal.org.np</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 py-4 bg-green-50/50 border-t-2 border-primary">
+     <div class="wrapper">
+        <p class="text-xs font-medium">
+            © {new Date().getFullYear()}, Multi-Dimensional Resource Center Nepal
+        </p>
+     </div>
+    </div>
+  </footer>
+

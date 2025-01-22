@@ -1,0 +1,55 @@
+---
+import {Icon} from 'astro-icon/components'
+import { Image } from 'astro:assets';
+import featuredImage from '@assets/images/5.jpeg';
+---
+
+<div class="wrapper section ">
+    <div class="mb-10 max-w-xl">
+        <p class="subtitle">Who We Are</p>
+        <div>
+            <h2 class="title">MRC Nepal: Together Building a <span>Sustainable</span> Future</h2>
+            <!-- <h2 class="title">MRC Nepal: <span>Creating Impact</span></h2> -->
+        </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-28">
+        <div>
+            <Image src={featuredImage} alt="happy peoples with banner against TB" />
+        </div>
+        <div>
+            <p>
+                MRC Nepal is a non-profit organization dedicated to fostering sustainable community development by reducing poverty through inclusive, participatory approaches. Guided by its vision of self-reliant, empowered societies, MRC Nepal integrates local resources and knowledge with innovative strategies to address critical challenges. Its mission focuses on improving livelihoods, promoting environmental sustainability, enhancing health and education, and advocating for human rights, ensuring equitable growth and resilience across Nepal's diverse communities.
+            </p>
+            
+            <div class="grid grid-cols-2 my-10 gap-5 ">
+                
+                <div class="border-r-4 border-primary ">
+                    <div class="flex items-center space-x-4 mb-3">
+                        <Icon name="vision" class="h-8 w-8 text-primary" />
+                        <h2 class="font-bold text-2xl">Vision</h2>
+                    </div>
+                    <div>
+                        <p class="text-sm">Socially and economically sustainable communities built on equity, peace, and the dignity and prosperity of all.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-4 mb-3">
+                        <Icon name="mission" class="h-8 w-8 text-primary" />
+                        <h2 class="font-bold text-2xl">Mission</h2>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm">Building sustainable and self-reliant societies in Nepal through community-driven initiatives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <a href="#" class="btn-gradient">More About MRC Nepal</a>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    
+</div>

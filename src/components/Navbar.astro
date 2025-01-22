@@ -2,6 +2,7 @@
 import Logo from '@components/Logo.astro';
 import menu from '@config/menu.json';
 
+
 export interface ChildNavigationLink {
     name: string;
     url: string;
@@ -21,17 +22,18 @@ const {pathname} = Astro.url;
 <header class="header">
     <nav class="navbar wrapper" aria-label="Main Navigation">
         <!-- Logo -->
-        <div class="flex items-center">
+        <a href="/">
+          <div class="flex items-center">
             <div class="order-first h-20 w-20">
                 <Logo />
-                </div>
+            </div>
             <div class="mx-2 md:hidden lg:block">
                 <p class="text-3xl font-extrabold tracking-wider">MRC Nepal</h1>
                 <p class="text-sm text-gray-700">
                 Facilitating for Self-Reliant Society
                 </p>
             </div>
-        </div>
+        </div></a>
         <!-- navbar toggle: start -->
         <input id="nav-toggle" type="checkbox" class="hidden" />
         <label for="nav-toggle" id="show-button" class="order-2 flex cursor-pointer items-center lg:order-1 lg:hidden">

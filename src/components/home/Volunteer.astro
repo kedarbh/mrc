@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon/components";
+
+
+
+---
+
+<section class="volunteer-section py-10">
+    <div class="volunteer-box wrapper">
+        <div class="volunteer-content">
+            <h2 class="title mb-10">Be a <span>Change-Maker!</span></h2>
+            <p>Your time and effort can make a real difference. Join our community of volunteers and create meaningful impact for the causes you care about!</p>
+            <div class="cta-buttons mt-10">
+              <a href="#" class="btn-gradient">Volunteer Now →</a>
+              <a href="#" class="btn-outlined">Explore Opportunities →</a>
+            </div>
+          </div>
+          <div class="volunteer-images">
+            <!-- <Icon name="volunteer" class="h-96 w-96" /> -->
+            <svg
+                class="h-5w-72 w-72  text-white"
+                fill="currentColor"
+                viewBox="0 0 106 106"
+              >
+                <path d="M52.68 0A53 53 0 001.12 63.87l3.07-1.64a5.83 5.83 0 016.42.62l8-4.29a21 21 0 0115.71-1.67l16.98 4.83a7 7 0 011.37 12.93 6.93 6.93 0 01-5 .6l-13.11-3.36a2.35 2.35 0 011.17-4.56L48.8 70.7a2.31 2.31 0 001.2-4.46l-16.93-4.83a16.31 16.31 0 00-12.21 1.3l-7.64 4.07L19.76 79a17 17 0 0114.05-.53l8.5 3.53a12.4 12.4 0 0010.51-.54l21.67-11.58a2.55 2.55 0 00-2.4-4.51l-8 4.3a2.35 2.35 0 11-2.21-4.15l8-4.3A7.26 7.26 0 0176.71 74L55 85.59a17 17 0 01-14.49.74L32 82.87a12.32 12.32 0 00-10.44.51 5.82 5.82 0 01-3.05 5.76l-2.15 1.15a2.4 2.4 0 01-.8.25A53 53 0 1052.68 0zm20.79 46.36L57.82 62.21 42 46.55a11.13 11.13 0 1115.63-15.84 11.13 11.13 0 1115.84 15.65z" />
+              </svg>
+          </div>
+    </div>
+  </section>
+
+  <style>
+
+    .volunteer-section {
+        background-color: #152238;
+        color: #fff;
+        
+    }
+
+    .volunteer-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .volunteer-content {
+        max-width: 50%;
+    }
+
+
+    .volunteer-content p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+    }
+/* 
+    .volunteer-images {
+        display: flex;
+        gap: 20px;
+    }
+
+    .volunteer-images img {
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    } */
+  </style>
