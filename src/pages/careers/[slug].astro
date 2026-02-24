@@ -27,7 +27,10 @@ deadlineDate.setHours(23, 59, 59, 999);
 const isExpired = deadlineDate < today;
 ---
 
-<Layout title={`${job.data.title} - Careers | MRC Nepal`}>
+<Layout 
+    title={`${job.data.title} - Careers | MRC Nepal`}
+    description={`We are hiring a ${job.data.title} based in ${job.data.location}. Join MRC Nepal to make a difference.`}
+>
     <!-- Header Page -->
     <section class="relative bg-green-900 text-white py-24 overflow-hidden pt-36">
         <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>

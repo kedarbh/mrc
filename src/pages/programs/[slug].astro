@@ -13,7 +13,10 @@ export async function getStaticPaths() {
 const { program } = Astro.props;
 ---
 
-<Layout>
+<Layout 
+  title={`${program.title} | MRC Nepal Programs`}
+  description={program.overview.substring(0, 155) + "..."}
+>
   <!-- Page Header -->
   <section class="relative bg-green-900 text-white py-32 overflow-hidden">
     <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>

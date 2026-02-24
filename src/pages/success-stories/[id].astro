@@ -22,7 +22,11 @@ const relatedStories = allStories
     .slice(0, 3);
 ---
 
-<Layout>
+<Layout
+  title={`${story.data.title} | Success Stories`}
+  description={story.data.description}
+  image={story.data.coverImage.src}
+>
   <!-- Hero Section (Immersive Background) -->
   <section class="relative h-[70vh] min-h-[600px] flex items-end pb-32 justify-center">
     <!-- Background Image -->
