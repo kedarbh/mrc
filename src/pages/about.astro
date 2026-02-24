@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import aboutFeatured from "@assets/images/about_featured.png";
+---
+
+<Layout>
+  <!-- Page Header -->
+  <section class="relative bg-green-900 text-white py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+    <div class="wrapper relative z-10 text-center max-w-4xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-medium text-sm mb-6 uppercase tracking-wider">
+        Our Story
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        About <span class="text-secondary">MRC Nepal</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+        Facilitating for a Self-Reliant Society through community-driven initiatives and sustainable development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduction & History -->
+  <section class="section wrapper py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Journey</h2>
+        <div class="prose prose-lg text-gray-600">
+          <p>
+            Multi-dimensional Resource Centre Nepal (MRC Nepal) is an alliance of multidisciplinary professionals working in the field of development. Registered in 2002 A.D., we are a member-based non-governmental, non-profit, and social development organization committed to excellence in sustainable community development.
+          </p>
+          <p>
+            With our head office in Kathmandu and main operation office in Hetauda, Makawanpur, our projects have been carried out across 17 districts of Nepal. We primarily focus on empowering marginalized groups—poor households, women, disadvantaged communities (Dalit, Janajati, etc.), and children—through eco-friendly agricultural interventions, income generation, and integrated social empowerment.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 bg-secondary/10 rounded-2xl transform -translate-x-4 translate-y-4 -z-10"></div>
+        <Image src={aboutFeatured} alt="MRC Nepal Community Work" class="rounded-2xl shadow-xl w-full object-cover h-[400px]" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision, Mission, Goal -->
+  <section class="bg-gray-50 py-20">
+    <div class="wrapper">
+      <div class="text-center mb-16">
+        <p class="subtitle mx-auto justify-center flex items-center mb-4">Our Guiding Principles</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Vision, Mission & Goals</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Vision -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <Icon name="vision" class="h-8 w-8 text-primary" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Socially and economically sustainable communities built upon the foundation of equity and peace in which all people live in dignity and prosperity.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+            <Icon name="mission" class="h-8 w-8 text-secondary" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+          <p class="text-gray-600 leading-relaxed">
+            To facilitate the process in the establishment of sustainable and self-reliant societies across Nepal.
+          </p>
+        </div>
+
+        <!-- Goal -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <Icon name="diversity" class="h-8 w-8 text-blue-600" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Goal</h3>
+          <p class="text-gray-600 leading-relaxed">
+            To reduce poverty through integrated development that meets immediate basic needs, builds peace through strong organizations, and improves the livelihoods of the most vulnerable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizational Policies -->
+  <section class="section wrapper py-20">
+    <div class="text-center mb-16">
+      <p class="subtitle mx-auto justify-center flex items-center mb-4">Our Commitment</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Organizational Policies</h2>
+    </div>
+
+    <div class="space-y-12">
+      <!-- Child Protection -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 relative overflow-hidden group">
+         <div class="absolute top-0 left-0 w-2 h-full bg-primary/80"></div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4 ml-4">Child Protection Policy</h3>
+         <p class="text-gray-600 leading-relaxed ml-4">
+            Underpinned by the UN Convention on the Rights of the Child, MRC Nepal is committed to promoting the rights of children, ensuring they are protected from harmful influences, abuse, and exploitation. This policy clearly states that child abuse in any form is unacceptable to our organization.
+         </p>
+      </div>
+
+      <!-- Gender and Social Inclusion -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 relative overflow-hidden group">
+         <div class="absolute top-0 left-0 w-2 h-full bg-secondary/80"></div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4 ml-4">Gender and Social Inclusion (GESI)</h3>
+         <p class="text-gray-600 leading-relaxed ml-4 mb-4">
+            MRC Nepal operates diverse programs addressing the discriminatory status of the pro-poor, women, landless, Dalits, Janajatis, and other disadvantaged groups (DAGs). We integrate GESI at all stages of our project cycles through:
+         </p>
+         <ul class="list-disc list-inside text-gray-600 leading-relaxed ml-4 space-y-2">
+            <li><strong>Affirmative Actions:</strong> Ensuring workforce diversification and recruiting more women and DAG employees at all levels.</li>
+            <li><strong>Cross-Cutting Integration:</strong> Integrating GESI in all organizational and project-level policies, guidelines, implementation, and monitoring.</li>
+         </ul>
+      </div>
+
+       <!-- Good Governance -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 relative overflow-hidden group">
+         <div class="absolute top-0 left-0 w-2 h-full bg-blue-500/80"></div>
+         <h3 class="text-2xl font-bold text-gray-900 mb-4 ml-4">Good Governance Policy</h3>
+         <p class="text-gray-600 leading-relaxed ml-4">
+            We consider transparency, accountability, responsiveness, and a culture of learning as essential components in our management. To ensure this, MRC Nepal promotes social audits, maintains democratic practices (like Quarterly Project Reviews and AGMs), and enforces strict mechanisms to address fraud and risk management.
+         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 text-center wrapper">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Want to be part of our journey?</h2>
+    <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">Whether you're looking to partner, volunteer, or support our programs, there are many ways to get involved.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/programs" class="btn-primary">Explore Our Programs</a>
+      <a href="/contact" class="btn-outlined">Contact Us</a>
+    </div>
+  </section>
+</Layout>

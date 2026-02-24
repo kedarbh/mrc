@@ -1,35 +1,24 @@
 ---
-
 const donorList = ['UNDP/GEF/SGP-UNOPS','WHO-Stop TB Partnership/CFCS','Tear Fund Uk', 'Stromme Foundation', 'OPEC/OFID','USAID/WWF-Hariyo Ban', 'USAID/DAI-Paani Project', 'Practical Action Nepal', 'GIZ/STPP', 'ABC Nepal', 'Plan International Nepal']
 ---
 
 <div class="wrapper section">
-    <div class="max-w-xl ">
-        <p class="subtitle">Our Donors</p>
+    <div class="lg:text-center mb-12 max-w-2xl mx-auto">
+        <p class="subtitle mx-auto justify-center flex items-center mb-4">Our Donors</p>
         <h2 class="title">Partners in <span>Building</span> Better Futures!</h2>
-        <!-- <h2 class="title">Making a <span>Difference</span> Together!</h2> -->
     </div>
-    <div class="section grid gap-5 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+    
+    <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 mb-12">
         {
             donorList.map((donor)=> (
-            <div class="border box-outlined  p-6 place-content-center">
-                    <p>{donor}</p>
+                <div class="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-center text-center shadow-sm hover:shadow-md hover:border-primary hover:-translate-y-1 transition-all duration-300 min-h-[100px] cursor-default group">
+                    <p class="text-sm font-semibold text-gray-600 group-hover:text-primary transition-colors">{donor}</p>
                 </div>
             ))
         }
     </div>
     
-    <a href="#" class="btn-outlined">View All Supporters →</a>
-    
+    <div class="flex justify-center">
+        <a href="#" class="btn-outlined">View All Supporters &rarr;</a>
+    </div>
 </div>
-
-<style>
-
-
-.donor-logo {
-  text-align: center;
-}
-
-
-
-</style>

@@ -1,0 +1,49 @@
+[
+    {
+        "image": "/images/slider/1.png",
+        "badgeTheme": "bg-secondary/20 border-secondary/50 text-secondary",
+        "badgeText": "Agriculture",
+        "title": "Promoting Sustainable Livelihoods",
+        "description": "Empowering communities through sustainable farming practices, market access, and modern techniques for a resilient future.",
+        "buttons": [
+            {
+                "text": "Explore Impact",
+                "link": "/success-stories",
+                "type": "primary"
+            },
+            {
+                "text": "Our Mission",
+                "link": "/about",
+                "type": "outline"
+            }
+        ]
+    },
+    {
+        "image": "/images/slider/2.png",
+        "badgeTheme": "bg-secondary/20 border-secondary/50 text-secondary",
+        "badgeText": "Health & Sanitation",
+        "title": "Community Action to End TB",
+        "description": "Empowering communities with health awareness, critical support systems, and essential care to eradicate preventable diseases.",
+        "buttons": [
+            {
+                "text": "See Our Work",
+                "link": "/projects",
+                "type": "primary"
+            }
+        ]
+    },
+    {
+        "image": "/images/slider/3.png",
+        "badgeTheme": "bg-secondary/20 border-secondary/50 text-secondary",
+        "badgeText": "Governance",
+        "title": "Empowering Voices for Self-Governance",
+        "description": "Fostering community participation to strengthen local governance, champion human rights, and amplify marginalized voices.",
+        "buttons": [
+            {
+                "text": "Get Involved",
+                "link": "/programs/human-rights",
+                "type": "primary"
+            }
+        ]
+    }
+]

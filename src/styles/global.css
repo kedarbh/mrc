@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* ================== COMPONENTS ================== */
+
+    /* Container */
+    .wrapper {
+        @apply mx-auto max-w-screen-xl px-3;
+    }
+
+    /* Section */
+    .section {
+        @apply py-16;
+    }
+
+    .box-outlined {
+        @apply px-6 py-4 rounded-md border border-primary/20 hover:border-primary transition-colors duration-300;
+        background-color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .box-outlined:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Swiper Pagination Override */
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        @apply bg-gray-400;
+        border-radius: 50%;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 32px;
+        @apply bg-primary;
+        border-radius: 9999px;
+    }
+
+    /* Typography */
+    @font-face {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/Yeseva-One.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+            U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+            U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    .yeseva {
+        font-family: "Yeseva One", serif;
+    }
+
+    .post-title {
+        @apply font-bold text-xl leading-tight my-5 yeseva;
+    }
+
+    /* ================== BUTTONS ================== */
+    .btn-primary {
+        @apply rounded-full shadow-md px-6 py-3 font-medium transition-all duration-300;
+        @apply bg-primary text-white hover:bg-green-800 hover:shadow-lg hover:-translate-y-0.5;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-outlined {
+        @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+        @apply text-primary border-2 border-primary bg-transparent;
+    }
+
+    .btn-outlined:hover {
+        @apply bg-primary text-white shadow-md;
+    }
+
+    /* ================== NAVIGATION ================== */
+
+    /* Navbar Toggle */
+    input#nav-toggle:checked~label#show-button {
+        @apply hidden;
+    }
+
+    input#nav-toggle:checked~label#hide-button {
+        @apply flex lg:hidden;
+    }
+
+    input#nav-toggle:checked~#nav-menu {
+        @apply block lg:flex;
+    }
+
+    /* Header */
+    .header {
+        @apply sticky top-0 z-50 bg-white py-6 transition-all duration-300 lg:bg-transparent w-full;
+    }
+
+    .header-sticky {
+        @apply bg-white shadow;
+    }
+
+    /* Navbar Items */
+    .navbar {
+        @apply relative flex flex-wrap items-center justify-between;
+    }
+
+    .navbar-nav {
+        @apply text-center lg:text-left;
+    }
+
+    .nav-link {
+        @apply block p-3 py-2 text-[15px] font-bold text-[#1a202c] transition hover:text-primary md:px-2 lg:inline-block;
+    }
+
+    .nav-link.active {
+        @apply relative text-primary;
+    }
+
+    .nav-link.active::after {
+        @apply absolute bottom-0 left-2 right-2 h-0.5 bg-secondary content-[''] rounded-full;
+    }
+
+    .nav-dropdown {
+        @apply mr-0;
+    }
+
+    .nav-dropdown-list {
+        @apply z-10 mx-auto ml-1 mt-4 max-w-[300px] rounded-lg border-0 border-solid border-primary/25 bg-[#e8f5ed] px-4 py-3 shadow-sm duration-300 lg:mt-0 lg:border lg:bg-white lg:shadow-xl;
+    }
+
+    .nav-dropdown-item {
+        @apply mb-1;
+    }
+
+    .nav-dropdown-link {
+        @apply min-w-[150px] py-1 text-sm font-medium text-[#1a202c] transition hover:text-primary;
+    }
+}

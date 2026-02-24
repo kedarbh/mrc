@@ -1,12 +1,23 @@
 ---
-title: Fallow Marginal Land Has Become Good Source of Income
-description: "Bikramiya Chaudary, 45 years old, is a pro poor farmer of Chitwan district of Nepal. Her family is food sufficiency below six months from their own production. For remaining months and for other expenses they are compelled to go to landlord or outside the village in search for daily wages. She was involved in the group under the program “Efficient Land Management for Socio-economic Enhancement in Southern Nepal” implemented by MRC Nepal in the financial assistance of OPEC/OFID."
+title: "Transforming Fallow Land into a Source of Prosperity"
+description: "For 45-year-old Bikramiya Chaudary, seasonal food scarcity meant forced labor outside her village. Today, armed with technical support and a vision, she has turned her family's marginal riverbank land into a thriving, high-yield vegetable farm."
 publishedDate: "2013-05-31"
-coverImage: "@assets/images/stories/bikramiya.webp"
+coverImage: "../../assets/images/stories/bikramiya.webp"
 ---
 
-Bikramiya Chaudary, 45 years old, is a pro poor farmer of Chitwan district of Nepal. Her family is food sufficiency below six months from their own production. For remaining months and for other expenses they are compelled to go to landlord or outside the village in search for daily wages. She was involved in the group under the program “Efficient Land Management for Socio-economic Enhancement in Southern Nepal” implemented by MRC Nepal in the financial assistance of OPEC/OFID.
+Bikramiya Chaudary, a 45-year-old farmer from the Chitwan district of Nepal, once faced a gruelling annual cycle. The crops produced on her family's small plot were only sufficient to feed them for less than six months of the year. To survive the remaining months and cover other essential expenses, Bikramiya and her family were compelled to leave their village and work as daily wage laborers for wealthy landlords. 
 
-In the technical and input support of MRC Nepal, she was ready to grow vegetable crops on her marginal fallow land near to river bank. Initially, she grew cauliflower, chilli, tomato and cabbage on her 1008m2land and able to fetch good price from that. Within shortest period of time she was able to earn about NRs. 36,000 (equivalent to NRs.360,000 per Ha/ \$ 4045 per Ha).“I have never expected such type of crop and income from this fallow land”, she expressed her happiness while the monitoring visit made from line agencies. With the success of her first crop, she was excited and has expanded the area under vegetable cultivation.
+Her circumstances took a dramatic turn when she joined a local farming group under the *"Efficient Land Management for Socio-Economic Enhancement in Southern Nepal"* program. Implemented by MRC Nepal with financial assistance from OPEC/OFID, the initiative aimed to empower resource-poor farmers by maximizing the potential of their unused land.
 
-The increased income is invested in household expenses and children education. In her own word, she says, “My husband assist me in vegetable farming and don’t go for daily wages any more”. She further added that, “I am in the learning phase of vegetable farming, so support should be continued at least for another two-three years so that I will become a commercial farmer and self reliance”.
+With dedicated technical guidance and agricultural inputs provided by MRC Nepal, Bikramiya made the bold decision to cultivate vegetable crops on her family's marginal, fallow land located near the riverbank. Starting small, she planted cauliflower, chili, tomato, and cabbage across a 1,008-square-meter plot. 
+
+### A Harvest Beyond Expectations
+The results were spectacular. She quickly managed to fetch premium prices for her high-quality yield, earning approximately NRs. 36,000 (equivalent to an impressive $4,045 per hectare) in a very short period. 
+
+"I never expected such an incredible crop and income from this fallow land," Bikramiya expressed joyfully during a monitoring visit from project agencies. Thrilled by the success of her very first harvest, she immediately began expanding the area dedicated to commercial vegetable cultivation.
+
+This new, sustainable stream of income has been transformative for her family, allowing her to comfortably cover household expenses and invest in her children's education. 
+
+> "My husband now assists me in vegetable farming, and we no longer have to leave our home for daily wage labor," she shared proudly. 
+
+Reflecting on her journey, Bikramiya remains ambitious: "I am still in the learning phase of vegetable farming. I hope this support continues for another two or three years so that I can establish myself as a fully commercial, self-reliant farmer."

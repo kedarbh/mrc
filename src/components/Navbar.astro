@@ -19,85 +19,168 @@ const { main }:{ main:NavigationLink[] } = menu;
 const {pathname} = Astro.url;
 ---
 
-<header class="header">
-    <nav class="navbar wrapper" aria-label="Main Navigation">
+<header class="header sticky w-full top-0 z-[60] transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <nav class="navbar wrapper relative flex items-center justify-between py-2 md:py-3" aria-label="Main Navigation">
         <!-- Logo -->
-        <a href="/">
-          <div class="flex items-center">
-            <div class="order-first h-20 w-20">
+        <a href="/" class="z-50 shrink-0">
+          <div class="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+            <div class="h-12 w-12 md:h-16 md:w-16 rounded-xl overflow-hidden shadow-sm bg-white p-0.5 md:p-1">
                 <Logo />
             </div>
-            <div class="mx-2 md:hidden lg:block">
-                <p class="text-3xl font-extrabold tracking-wider">MRC Nepal</h1>
-                <p class="text-sm text-gray-700">
+            <div class="hidden lg:block">
+                <p class="text-xl xl:text-2xl font-extrabold tracking-tight text-gray-900 leading-tight">MRC Nepal</p>
+                <p class="text-[10px] xl:text-xs font-medium text-primary tracking-wide uppercase mt-0.5">
                 Facilitating for Self-Reliant Society
                 </p>
             </div>
         </div></a>
-        <!-- navbar toggle: start -->
-        <input id="nav-toggle" type="checkbox" class="hidden" />
-        <label for="nav-toggle" id="show-button" class="order-2 flex cursor-pointer items-center lg:order-1 lg:hidden">
-            <svg class="h-6 fill-current" viewBox="0 0 20 20">
-                <title>Menu Open</title>
-                <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex lg:items-center">
+            <ul class="flex items-center gap-1 xl:gap-2">
+                {
+                    main.map((menu)=> (
+                    <>
+                {menu.hasChildren ? (
+                  <li class="nav-item group relative">
+                    <!-- Desktop Dropdown Trigger -->
+                    <span class={`inline-flex items-center gap-1.5 px-3 xl:px-4 py-2.5 rounded-full text-[15px] font-medium transition-all cursor-pointer ${
+                            menu.children?.map(({ url }) => url).includes(pathname) ||
+                            menu.children?.map(({ url }) => `${url}/`).includes(pathname)
+                            ? "text-primary bg-primary/5"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        }`}
+                    >
+                      {menu.name}
+                      <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300 group-hover:-rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+
+                    <!-- Mini Mega Menu (Desktop) -->
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <ul class="w-[280px] bg-white rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-100 p-3 flex flex-col gap-1 relative overflow-hidden">
+                            {menu.children?.map((child) => (
+                                <li>
+                                  <a
+                                    href={child.url}
+                                    class={`flex items-center px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                                      (pathname === `${child.url}/` || pathname === child.url)
+                                        ? "bg-primary/5 text-primary font-semibold"
+                                        : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                                    }`}
+                                  >
+                                    <span class="relative">
+                                        {child.name}
+                                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary/30 transition-all duration-300 group-hover/link:w-full"></span>
+                                    </span>
+                                  </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                  </li>
+                ) : (
+                  <li class="nav-item">
+                    <a
+                      href={menu.url}
+                      class={`block py-2.5 px-3 xl:px-4 text-[15px] font-medium rounded-full transition-all ${
+                        (pathname === `${menu.url}/` || pathname === menu.url)
+                          ? "text-primary bg-primary/5"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      }`}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                )}
+              </>
+                    ))
+                }
+            </ul>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2 text-gray-600 hover:text-primary transition-colors focus:outline-none" aria-label="Open Menu">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-        </label>
-        <label id="hide-button" for="nav-toggle" class="order-2 hidden cursor-pointer items-center lg:order-1">
-            <svg class="h-6 fill-current" viewBox="0 0 20 20">
-                <title>Menu Close</title>
-                <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)">
-            </polygon>
+        </button>
+    </nav>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="nav-overlay" class="fixed inset-0 bg-gray-900/40 backdrop-blur-sm z-[100] lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<div id="nav-menu-container" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[110] transform translate-x-full transition-transform duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] lg:hidden flex flex-col shadow-2xl">
+    
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-white shrink-0">
+        <!-- Logo -->
+        <a href="/" class="z-50 shrink-0">
+          <div class="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+            <div class="h-12 w-12 md:h-16 md:w-16 rounded-xl overflow-hidden shadow-sm bg-white p-0.5 md:p-1">
+                <Logo />
+            </div>
+            <div class="block">
+                <p class="text-xl xl:text-2xl font-extrabold tracking-tight text-gray-900 leading-tight">MRC Nepal</p>
+                <p class="text-[10px] xl:text-xs font-medium text-primary tracking-wide uppercase mt-0.5">
+                Facilitating for Self-Reliant Society
+                </p>
+            </div>
+        </div></a>
+        <button id="mobile-close-btn" class="p-2 -mr-2 text-gray-500 hover:text-primary bg-gray-50 hover:bg-primary/10 rounded-full transition-colors focus:outline-none" aria-label="Close Menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
-        </label>
-        <!-- navbar toggle: end -->
-        <ul id="nav-menu" class="navbar-nav order-3 hidden w-full lg:order-1 lg:flex lg:w-auto lg:space-x-2">
+        </button>
+    </div>
+
+    <!-- Drawer Content -->
+    <div class="flex-1 overflow-y-auto px-6 py-6 pb-24 bg-gray-50/50">
+        <ul class="flex flex-col gap-3 w-full">
             {
                 main.map((menu)=> (
                 <>
             {menu.hasChildren ? (
-              <li class="nav-item nav-dropdown group relative cursor-pointer  dropdown-button">
-                <span
-                  class={`nav-link inline-flex items-center ${
-                    menu.children?.map(({ url }) => url).includes(pathname) ||
-                    menu.children
-                      ?.map(({ url }) => `${url}/`)
-                      .includes(pathname)
-                      ? "active"
-                      : ""
-                  }`}
-                >
-                  {menu.name}
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </span>
-                <ul
-                  id="dropdown"
-                  class="nav-dropdown-list mx-auto hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
-                >
-                  {menu.children?.map((child) => (
-                    <li class="nav-dropdown-item">
-                      <a
-                        href={child.url}
-                        class={`nav-dropdown-link block ${
-                          (pathname === `${child.url}/` ||
-                            pathname === child.url) &&
-                          "text-primary"
-                        }`}
-                      >
-                        {child.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+              <li class="nav-item group relative bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <button class="mobile-dropdown-btn flex items-center justify-between w-full p-4 lg:hidden text-lg font-semibold text-gray-800 focus:outline-none">
+                    {menu.name}
+                    <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center transition-colors">
+                        <svg class="w-5 h-5 text-gray-500 transition-transform duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </button>
+                
+                <!-- Mobile Accordion Content -->
+                <div class="mobile-dropdown-content hidden opacity-0 transition-opacity duration-300 bg-white">
+                    <ul class="px-2 pb-3 flex flex-col gap-1">
+                        {menu.children?.map((child) => (
+                            <li>
+                              <a
+                                href={child.url}
+                                class={`flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${
+                                  (pathname === `${child.url}/` || pathname === child.url)
+                                    ? "bg-primary/10 text-primary font-bold"
+                                    : "text-gray-600 hover:bg-gray-50 hover:text-gray-900 font-medium"
+                                }`}
+                              >
+                                {child.name}
+                              </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
               </li>
             ) : (
               <li class="nav-item">
                 <a
                   href={menu.url}
-                  class={`nav-link inline-block lg:block ${
-                    (pathname === `${menu.url}/` || pathname === menu.url) &&
-                    "active"
+                  class={`block p-4 text-lg font-semibold rounded-2xl transition-all border border-gray-100 shadow-sm ${
+                    (pathname === `${menu.url}/` || pathname === menu.url)
+                      ? "bg-primary text-white border-primary"
+                      : "bg-white text-gray-800 hover:text-primary hover:border-primary/30"
                   }`}
                 >
                   {menu.name}
@@ -107,36 +190,101 @@ const {pathname} = Astro.url;
           </>
                 ))
             }
-
         </ul>
-    </nav>
-</header>
+    </div>
+</div>
 
 <script is:inline>
-    document.querySelectorAll(".dropdown-button").forEach((button) => {
-      button.addEventListener("click", (e) => {
-        const dropdown = e.target.nextElementSibling;
-        dropdown.classList.toggle(
-          dropdown.style === "hidden" ? "block" : "hidden"
-        );
-      });
+    const header = document.querySelector('.header');
+    let lastScroll = 0;
+
+    // Sticky header logic
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            header.classList.add('shadow-md');
+            header.classList.replace('py-2', 'py-1');
+            header.classList.replace('md:py-3', 'md:py-2');
+        } else {
+            header.classList.remove('shadow-md');
+            header.classList.replace('py-1', 'py-2');
+            header.classList.replace('md:py-2', 'md:py-3');
+        }
+        lastScroll = currentScroll;
     });
 
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-close-btn');
+    const navContainer = document.getElementById('nav-menu-container');
+    const overlay = document.getElementById('nav-overlay');
 
-    const primaryHeader = document.querySelector(".header");
-    const scrollWatcher = document.createElement("div");
+    function openMenu() {
+        navContainer.classList.remove('translate-x-full');
+        navContainer.classList.add('translate-x-0');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
 
-    scrollWatcher.setAttribute("data-scroll-watcher", "");
-    primaryHeader.before(scrollWatcher);
+    function closeMenu() {
+        navContainer.classList.remove('translate-x-0');
+        navContainer.classList.add('translate-x-full');
+        overlay.classList.remove('opacity-100', 'pointer-events-auto');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
 
-    const navObserver = new IntersectionObserver(
-    (entries) => {
-        primaryHeader.classList.toggle("header-sticky", !entries[0].isIntersecting);
-    },
-    { rootMargin: "20px 0px 0px 0px" }
-    );
+    mobileBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
 
-    navObserver.observe(scrollWatcher);
-
-
-  </script>
+    // Mobile Dropdown Accordions
+    document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const content = this.nextElementSibling; // Get the dropdown content div
+            const iconContainer = this.querySelector('div');
+            const icon = this.querySelector('div > svg');
+            
+            if (content.classList.contains('hidden')) {
+                // Close others
+                document.querySelectorAll('.mobile-dropdown-content:not(.hidden)').forEach(el => {
+                    el.classList.add('hidden');
+                    el.classList.remove('opacity-100');
+                    const btnIcon = el.previousElementSibling.querySelector('div > svg');
+                    const btnContainer = el.previousElementSibling.querySelector('div');
+                    if (btnIcon) btnIcon.style.transform = 'rotate(0deg)';
+                    if (btnContainer) {
+                        btnContainer.classList.remove('bg-primary/10');
+                        btnContainer.classList.add('bg-gray-50');
+                        btnIcon.classList.remove('text-primary');
+                        btnIcon.classList.add('text-gray-500');
+                    }
+                });
+                
+                content.classList.remove('hidden');
+                // slight delay for opacity transition to work after display block
+                setTimeout(() => {
+                    content.classList.add('opacity-100');
+                }, 10);
+                
+                icon.style.transform = 'rotate(180deg)';
+                iconContainer.classList.remove('bg-gray-50');
+                iconContainer.classList.add('bg-primary/10');
+                icon.classList.remove('text-gray-500');
+                icon.classList.add('text-primary');
+            } else {
+                content.classList.remove('opacity-100');
+                setTimeout(() => {
+                    content.classList.add('hidden');
+                }, 300); // Wait for transition
+                icon.style.transform = 'rotate(0deg)';
+                iconContainer.classList.add('bg-gray-50');
+                iconContainer.classList.remove('bg-primary/10');
+                icon.classList.remove('text-primary');
+                icon.classList.add('text-gray-500');
+            }
+        });
+    });
+</script>

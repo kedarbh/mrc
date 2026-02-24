@@ -1,13 +1,19 @@
 ---
-title: "Vegetable Farming Changed My Life"
-description: "Hathani Tharuni, 35 years old single woman, is living with her two daughters in a landless settlement of Khaireni VDC of Chitwan district. Illiterate Hathani is solely responsible to feed her family after her husband death on an accident. She was grappling with poverty and wages made from labor is only means to solve hand to mouth problem of her family."
+title: "Vegetable Farming Transformed My Life: Hathani's Journey"
+description: "Left to raise two daughters alone after a tragic accident, Hathani Tharuni found herself grappling with poverty and landlessness. Today, a humble lease on a marginal riverbed has transformed her life from despair to dignified self-reliance."
 coverImage: "@assets/images/stories/hathani.webp"
 publishedDate: "2014-07-01T07:35:07.322Z"
-
 ---
 
-Hathani Tharuni, 35 years old single woman, is living with her two daughters in a landless settlement of Khaireni VDC of Chitwan district. Illiterate Hathani is solely responsible to feed her family after her husband death on an accident. She was grappling with poverty and wages made from labor is only means to solve hand to mouth problem of her family.
+For 35-year-old Hathani Tharuni, a single mother living in the landless settlement of Khaireni VDC in the Chitwan district, survival was a daily battle. After tragically losing her husband in an accident, the illiterate widow found herself solely responsible for feeding her two young daughters. Grappling with severe poverty, the meager wages she earned from hard physical labor were her only means to keep her family from going hungry.
 
-Program named “Efficient Land Management for Socio-economic Enhancement in Southern Nepal” implemented by MRC Nepal in the financial assistance of OPEC/OFID involved her in vegetable production group and motivated her to grow vegetable. Initially she was reluctant because she is nearly landless but finally she was convinced to grow vegetable even by taking a marginal wastage land at river bed on lease. Because these marginal land value less as compared to other land. Initially she took 3360m2 of land on rent and in technical and input support from MRC Nepal she grew Pea (Pisum sativum) on that land. Within four months period she was able to harvest 2450 kg of green pods from which she earned NRs.80,000 (equivalent to NRs.238,095 per Ha/ \$2700 per Ha). She never had this type of huge income before. After the success of first season crop she became excited and planning to take more land on rent to cultivate vegetable.
+Her life began to change when she connected with the *"Efficient Land Management for Socio-Economic Enhancement in Southern Nepal"* program, implemented by MRC Nepal with financial assistance from OPEC/OFID. The program integrated Hathani into a localized vegetable production group, encouraging her to start growing her own crops. Initially, she was deeply reluctant—how could someone who was nearly landless become a farmer? However, she was eventually persuaded to take a leap of faith by leasing a patch of "marginal wasteland" along the riverbed, land that was considered nearly valueless by others.
 
-Income from vegetable was used for household expenses, loan installment repayment, education of children and health related expenses. “Support provided by OFID/MRC Nepal is boon for me”, she expressed in a smiling face. She further added, “This type of support should be continued until we became self-reliance then our life will be transformed into dignified family.”
+Hathani leased just 3,360 square meters of this riverbed. Armed with technical guidance and agricultural inputs from MRC Nepal, she meticulously planted and cultivated green peas (*Pisum sativum*). 
+
+### A Record Harvest
+The outcome was astonishing. Within just four months, Hathani harvested 2,450 kilograms of green pods. This yielded an unprecedented income of NRs. 80,000 (equivalent to approximately $2,700 per hectare). She had never seen such a massive return in her life. Energized and inspired by her successful first season, Hathani immediately began planning to lease more land to scale up her newfound enterprise.
+
+The income from her vegetable harvest was entirely life-changing. She was finally able to cover basic household expenses with ease, repay outstanding loan installments, fund her children's education, and comfortably afford healthcare. 
+
+> "The support provided by MRC Nepal and OFID has been an absolute boon for me," Hathani expressed with a radiant smile. "This kind of support shouldn't just stop—it should continue until we become completely self-reliant. Only then will our lives truly transform into a dignified existence for our families."

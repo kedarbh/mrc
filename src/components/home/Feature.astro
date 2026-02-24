@@ -1,119 +1,96 @@
 ---
 import { Icon } from 'astro-icon/components';
+import SectionTitle from '@components/ui/SectionTitle.astro';
 ---
 
-
 <div class="wrapper section">
-    <div class="lg:text-center">
-    <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+    <SectionTitle subtitle="What We Do" align="center" class="mb-16">
         Empowerment Initiated for Self Sustained Livelihood
-    </h3>
-    <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
-        MRC Nepal has a mission to enrich lives supporting biodiversity
-        inorder to provide various socio economic, educational and
-        environmental services to anybody in need.
-    </p>
-    </div>
+        <Fragment slot="description">
+            MRC Nepal has a mission to enrich lives supporting biodiversity
+            in order to provide various socio-economic, educational and
+            environmental services to anybody in need.
+        </Fragment>
+    </SectionTitle>
 
-    <div class="section">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-x-28 lg:gap-y-16">
-            <div class="flex space-x-4 items-center">
-                <div class="flex-shrink-0">
-                    <div class="flex items-center justify-center ">
-                        <Icon name="piggy-bank" class="h-24 w-24 text-primary"/>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <h5 class="text-lg leading-6 font-medium text-gray-900 uppercase">
-                        SUSTAINABLE LIVELIHOOD
-                    </h5>
-                    <p class=" text-base leading-6 text-gray-700">
-                        Empowering communities with entrepreneurship, market access, and microfinance to combat poverty and hunger.
-                    </p>
-                </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                <Icon name="piggy-bank" class="h-8 w-8 text-primary group-hover:text-white transition-colors duration-300"/>
             </div>
-            <div class="flex">
-                <div class="flex-shrink-0">
-                <div class="flex items-center justify-center ">
-                    <Icon name="environment" class="h-20 w-20 text-primary"/>
-                </div>
-                </div>
-                <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">
-                    ENVIRONMENT & BIODIVERSITY
-                </h5>
-                <p class="mt-2 text-base leading-6 text-gray-700">
-                    Protecting nature with species conservation, climate action, and disaster risk management.
-                </p>
-                </div>
-            </div>
-
-            <div class="flex">
-                <div class="flex-shrink-0">
-                <div class="flex items-center justify-center">
-                    <Icon name="education" class="h-20 w-20 text-primary"/>
-                </div>
-                </div>
-                <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900 uppercase">
-                    Education
-                </h5>
-                <p class="mt-2 text-base leading-6 text-gray-700">
-                    Enhance access to quality education, foster lifelong learning, and promote knowledge as a tool for empowerment and development.
-                    <!-- Unlocking potential through access to quality education and lifelong learning opportunities. -->
-                </p>
-                </div>
-            </div>
-            
-            <div class="flex">
-                <div class="flex-shrink-0">
-                <div class="flex items-center justify-center">
-                    <Icon name="diversity" class="h-20 w-20 text-primary"/>
-                </div>
-                </div>
-                <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900 uppercase">
-                    Human Rights
-                </h5>
-                <p class="mt-2 text-base leading-6 text-gray-700">
-                    Advancing justice, equality, and education to empower communities and foster development.
-                </p>
-                </div>
-            </div>
-            
-
-            <div class="flex">
-                <div class="flex-shrink-0">
-                    <div class="flex items-center justify-center">
-                        <Icon name="health" class="h-20 w-20 text-primary"/>
-                    </div>
-                </div>
-                <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900 uppercase">
-                    HEALTH & SANITATION
-                </h5>
-                <p class="mt-2 text-base leading-6 text-gray-700">
-                    Promoting healthier lives through nutrition, WASH initiatives, and mobile health clinics.
-                </p>
-                </div>
-            </div>
-            <div class="flex">
-                <div class="flex-shrink-0">
-                <div class="flex items-center justify-center ">
-                    <Icon name="energy" class="h-20 w-20 text-primary"/>
-                </div>
-                </div>
-                <div class="ml-4">
-                <h5 class="text-lg leading-6 font-medium text-gray-900 uppercase">
-                    RENEWABLE ENERGY & CLEAN COOKING SOLUTION
-                </h5>
-                <p class="mt-2 text-base leading-6 text-gray-700">
-                    Transforming rural lives with renewable energy and eco-friendly cooking solutions for better health.
-                </p>
-                </div>
-            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Sustainable Livelihood
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Empowering communities with entrepreneurship, market access, and microfinance to combat poverty and hunger.
+            </p>
         </div>
-    
+
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                <Icon name="environment" class="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-300"/>
+            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Environment & Biodiversity
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Protecting nature with species conservation, climate action, and disaster risk management.
+            </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+                <Icon name="education" class="h-8 w-8 text-secondary group-hover:text-white transition-colors duration-300"/>
+            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Education
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Enhance access to quality education, foster lifelong learning, and promote knowledge as a tool for empowerment.
+            </p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+                <Icon name="diversity" class="h-8 w-8 text-purple-600 group-hover:text-white transition-colors duration-300"/>
+            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Human Rights
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Advancing justice, equality, and education to empower communities and foster development.
+            </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-red-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors duration-300">
+                <Icon name="health" class="h-8 w-8 text-red-500 group-hover:text-white transition-colors duration-300"/>
+            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Health & Sanitation
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Promoting healthier lives through nutrition, WASH initiatives, and mobile health clinics.
+            </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+            <div class="w-16 h-16 bg-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+                <Icon name="energy" class="h-8 w-8 text-yellow-600 group-hover:text-white transition-colors duration-300"/>
+            </div>
+            <h5 class="text-xl font-bold text-gray-900 mb-3 tracking-tight">
+                Renewable Energy
+            </h5>
+            <p class="text-gray-600 leading-relaxed">
+                Transforming rural lives with renewable energy and eco-friendly cooking solutions for better health.
+            </p>
+        </div>
     </div>
 </div>
   

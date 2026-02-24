@@ -9,22 +9,61 @@ const stories= await getCollection('stories');
 ---
 
 <Layout>
-    <div class="wrapper">
-        <ul>
+    <!-- Page Header -->
+    <section class="relative bg-green-900 text-white py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+        <div class="wrapper relative z-10 text-center max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-medium text-sm mb-6 uppercase tracking-wider">
+                Impact In Action
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                Success <span class="text-secondary">Stories</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+                Real stories of change, resilience, and empowerment from the communities we serve across Nepal.
+            </p>
+        </div>
+    </section>
+
+    <div class="wrapper section py-20 bg-gray-50/50">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {
                 stories.map((post) => (
-                    <li>
-                        <a href={`/success-stories/${post.id}/`}>
-                        <Image src = {post.data.coverImage} alt="bikrimaya"/>
-                            
-                            <h4 class="title">{post.data.title}</h4>
-                            <p class="date">
-                                {post.data.publishedDate}
-                            </p>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group">
+                        <a href={`/success-stories/${post.id}/`} class="block overflow-hidden relative aspect-[4/3] bg-gray-100">
+                            <Image 
+                                src={post.data.coverImage} 
+                                alt={post.data.title}
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <!-- Date Badge Overlay -->
+                            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
+                                <span class="text-xs font-bold text-gray-800 uppercase tracking-wider block">
+                                    {new Date(post.data.publishedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                </span>
+                            </div>
                         </a>
-                    </li>
+                        
+                        <div class="p-6 flex flex-col flex-grow">
+                            <a href={`/success-stories/${post.id}/`}>
+                                <h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors leading-snug line-clamp-3">
+                                    {post.data.title}
+                                </h2>
+                            </a>
+                            
+                            <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
+                                {post.data.description}
+                            </p>
+                            
+                            <div class="mt-auto pt-4 border-t border-gray-100">
+                                <a href={`/success-stories/${post.id}/`} class="text-sm font-bold text-primary flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                    Read Full Story &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 ))
             }
-        </ul>
+        </div>
     </div>
 </Layout>

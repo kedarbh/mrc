@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <!-- Page Header -->
+  <section class="relative bg-green-900 text-white py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+    <div class="wrapper relative z-10 text-center max-w-4xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-medium text-sm mb-6 uppercase tracking-wider">
+        Our Thematic Areas
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Our <span class="text-secondary">Programs</span> & Capabilities
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+        Discover the core thematic areas driving our mission towards a self-reliant and resilient society.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs Grid -->
+  <section class="wrapper section py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Program 1 -->
+      <a href="/programs/sustainable-livelihood" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+            <Icon name="piggy-bank" class="h-8 w-8 text-primary group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-primary transition-colors">
+            Sustainable Livelihood
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Empowering communities with entrepreneurship, market access, and microfinance to combat poverty and hunger, ensuring food security and economic independence.
+        </p>
+        <span class="text-primary font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+
+      <!-- Program 2 -->
+      <a href="/programs/environment-biodiversity" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+            <Icon name="environment" class="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">
+            Environment & Biodiversity
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Protecting nature with species conservation, climate action, and disaster risk management to sustain natural resources for future generations.
+        </p>
+        <span class="text-blue-600 font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+
+      <!-- Program 3 -->
+      <a href="/programs/education" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300">
+            <Icon name="education" class="h-8 w-8 text-secondary group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-secondary transition-colors">
+            Education
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Enhance access to quality education, foster lifelong learning, and promote knowledge as a tool for empowerment, particularly for marginalized youth.
+        </p>
+        <span class="text-secondary font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+      
+      <!-- Program 4 -->
+      <a href="/programs/human-rights" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+            <Icon name="diversity" class="h-8 w-8 text-purple-600 group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-purple-600 transition-colors">
+            Human Rights & Social Justice
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Advancing justice, equality, and civic education to empower communities, eliminate discrimination, and foster inclusive development.
+        </p>
+        <span class="text-purple-600 font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+
+      <!-- Program 5 -->
+      <a href="/programs/health-sanitation" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-red-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500 transition-colors duration-300">
+            <Icon name="health" class="h-8 w-8 text-red-500 group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-red-500 transition-colors">
+            Health & Sanitation
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Promoting healthier lives through improved nutrition, WASH (Water, Sanitation, and Hygiene) initiatives, and community health awareness programs.
+        </p>
+        <span class="text-red-500 font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+
+      <!-- Program 6 -->
+      <a href="/programs/renewable-energy" class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group block">
+        <div class="w-16 h-16 bg-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 transition-colors duration-300">
+            <Icon name="energy" class="h-8 w-8 text-yellow-600 group-hover:text-white transition-colors duration-300"/>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 tracking-tight group-hover:text-yellow-600 transition-colors">
+            Renewable Energy
+        </h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Transforming rural lives with reliable renewable energy and eco-friendly clean cooking solutions to protect health and the environment.
+        </p>
+        <span class="text-yellow-600 font-bold text-sm flex items-center group-hover:translate-x-1 transition-transform">
+            Learn More &rarr;
+        </span>
+      </a>
+
+    </div>
+  </section>
+</Layout>

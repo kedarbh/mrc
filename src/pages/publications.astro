@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+// Placeholder data from old contents
+const publications = [
+  {
+    title: "Handbook on Climate Smart Agriculture in Nepali",
+    coverUrl: "https://placehold.co/400x550/e2e8f0/1e293b?text=Climate+Smart+Agriculture",
+    fileUrl: "#", // In a real scenario, this would be the PDF link
+  }
+];
+---
+
+<Layout>
+  <!-- Page Header -->
+  <section class="relative bg-green-900 text-white py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-secondary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+    <div class="wrapper relative z-10 text-center max-w-4xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-medium text-sm mb-6 uppercase tracking-wider">
+        Knowledge & Insights
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Our <span class="text-secondary">Publications</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+        Explore recent reports, handbooks, and research publications from MRC Nepal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Publications Grid -->
+  <section class="section wrapper py-20 bg-gray-50/50">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {publications.map((doc) => (
+        <a href={doc.fileUrl} class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group">
+          <div class="relative overflow-hidden aspect-[3/4] bg-gray-100 p-8 flex items-center justify-center">
+            <!-- Simulated cover image -->
+            <img src={doc.coverUrl} alt={doc.title} class="w-full h-full object-cover shadow-md group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <svg class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+            </div>
+          </div>
+          
+          <div class="p-6 flex flex-col flex-grow">
+            <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors leading-snug">
+              {doc.title}
+            </h2>
+            
+            <div class="mt-auto pt-4 border-t border-gray-100">
+               <span class="text-sm font-bold text-secondary flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                   Download PDF &rarr;
+               </span>
+            </div>
+          </div>
+        </a>
+      ))}
+      
+      <!-- Placeholder Box for visual completeness if there's only 1 item -->
+      <div class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center p-8 opacity-60 min-h-[350px]">
+          <svg class="w-12 h-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <p class="text-gray-500 font-medium">More publications<br/>coming soon...</p>
+      </div>
+
+    </div>
+  </section>
+</Layout>

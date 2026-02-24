@@ -1,13 +1,23 @@
 ---
-title: "Liquor Making Drum Used For Making Organic Pesticides In Gairibari Chitwan"
-description: "With proper training and guidance Mrs. Nau Maya Gurung became a dedicated farmer producing off season organic vegetables. Her only income generating activities was to produce liquor in home, which was not appreciated by the community. Now the changes in her work nature has not only changed the purpose of drum to make Geetimaal (organic pesticides), she has transformed herself into a exemplary individual in the community."
-coverImage: "@assets/images/stories/liquor-making-drum-used-for-making-organic-pesticides.webp"
+title: "From Brewing Liquor to Cultivating Life: The Transformation of Nau Maya Gurung"
+description: "Once relying on brewing local liquor to survive—a practice frowned upon by her community—44-year-old Nau Maya Gurung has repurposed her brewing drums to create organic biopesticides, transforming into an exemplary organic farmer."
+coverImage: "../../assets/images/stories/liquor-making-drum-used-for-making-organic-pesticides.webp"
 publishedDate: "2013-02-14T05:35:07.322Z"
-
 ---
 
-A 44 years Mrs. Nau Maya Gurung belong to the poor peasant Gurung ethnic group (disadvantaged and Janjati) in habitant of Gairibari, Shaktikhor-4, Chitwan have had no vegetable farming before. Since, May 2012 she has been involving in a vegetable model farm promoted by GIZ/STPP/MRC Nepal. Since then in the early month she planted in about 500m2 area of green vegetables Okra, cucumber, bottle gourd, tomato and bitter gourd. Within 3 months, she started harvesting the tender fruit to satisfy her kitchen requirement and continued harvesting up to November and able to earn worth NPRs.22, 000. She again scaled up the vegetable growing areas of about 3 kattha(1000m2) with tomato, chilly and cabbage.
+For 44-year-old Nau Maya Gurung, a peasant farmer from the marginalized Gurung ethnic group in Gairibari, Chitwan, life was defined by limited opportunities. With no prior experience in agriculture, her primary means of generating income was brewing local liquor at home—a practice that was largely unappreciated and frowned upon by her community. 
 
-She started harvesting from November till January and able to earn NRs. 44,225 (except home consumption) through early winter production technologies. Again, the harvesting is continuing. She happily said, this is marvelous for me to meet the need of vegetable in kitchen with sufficient nutrients supplement in food.
+Her narrative began to shift dramatically in May 2012 when she joined a vegetable model farm initiative promoted by GIZ/STPP and MRC Nepal. Embracing the opportunity, she planted okra, cucumber, bottle gourd, tomato, and bitter gourd across a modest 500-square-meter plot. Within just three months, she was harvesting enough fresh, tender vegetables to fully sustain her own kitchen, while also earning a remarkable NPR 22,000 by November. 
 
-Not only herself, but also she provided the surplus green vegetable to the neighbor too. Not only these, her husband who never involved in vegetable before, now with pleasure he involved in the vegetable garden to support his wife. Such type of income they never have had before and with pleasure, they are maintaining better livelihood with dependent children 3 daughters and 1 son from the income of vegetable. With sufficient pleasure including her community she encouraged and motivated to be involved in commercial vegetable farming supported by GIZ/STPP/MRC Nepal. For the plant protection she intensively has been using Jeevatu and Geetimal(organic bio pesticides) and happily expressed “ Local Liquor making drum is converted into Geetimal making drum in Gairibari, Chitwan ”. In Gurung community, local liquor making is so prevalent and now this is lowering down after the introduction of vegetable Model Farm promoted by GIZ/STPP/MRC Nepal.At the end, she committed to expand the vegetable farm at commercial scale in all community members.
+Encouraged by this initial success, Nau Maya boldly scaled up her operations, dedicating over 1,000 square meters to cultivate tomatoes, chilies, and cabbage. 
+
+### A Community Role Model
+By adopting early-winter production technologies, her second harvest—running from November through January—yielded an impressive NRs. 44,225 in sales alone. "This is marvelous for me," she shared happily. "Not only am I meeting all my kitchen needs, but I am also ensuring my family has sufficient, nutritious food."
+
+Nau Maya's success quickly rippled outward. She began supplying her surplus green vegetables to neighbors. More profoundly, her husband—who had never previously engaged in farming—gladly joined her in the garden to support the flourishing enterprise. Together, they are now securing a vastly improved livelihood for their three daughters and one son.
+
+However, the most symbolic change in Nau Maya's life lies in her approach to plant protection. She now intensively uses *Jeevatu* and *Geetimal* (organic biopesticides). 
+
+> With a proud smile, she remarked, "My local liquor-making drum has been completely converted into a *Geetimal*-making drum!" 
+
+In the Gurung community, local liquor production has historically been prevalent, but Nau Maya’s success is shifting local paradigms. Her journey from a marginalized brewer to a respected, affluent organic farmer has inspired her entire community to explore commercial vegetable farming. Today, Nau Maya stands as a committed community leader, dedicated to expanding commercial vegetable farming and sharing her knowledge with all her neighbors.

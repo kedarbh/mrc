@@ -1,0 +1,52 @@
+[
+    {
+        "slug": "sustainable-livelihood",
+        "title": "Sustainable Livelihood",
+        "overview": "MRC Nepal supports tackling poverty among the poorest of the poor by promoting entrepreneurship in agriculture and non-agricultural base enterprises such as goats, pigs, fishery, off-season vegetables, NTFP, herbs, and dairy.",
+        "activities": [
+            "Food and Nutritional Security for rural and vulnerable communities",
+            "Promotion of small to medium enterprises",
+            "Integrated Community Development through subsistence agriculture"
+        ]
+    },
+    {
+        "slug": "education",
+        "title": "Education and Human Rights",
+        "overview": "Information and education are fundamental cornerstones for sustainable development. We promote child rights, self-governance, and peace-building conflict resolution approaches.",
+        "activities": [
+            "Conflict Resolution and Peace Building",
+            "Promoting awareness on financial education and management",
+            "Gender in Social Inclusion (GESI) integration"
+        ]
+    },
+    {
+        "slug": "health-sanitation",
+        "title": "Health and Sanitation",
+        "overview": "Access to sustainable, reliable, safe water supply and environmental sanitation facilities is a basic human right. We work to eradicate preventable diseases and provide critical health support.",
+        "activities": [
+            "Water, Sanitation and Hygiene (WASH) programs",
+            "Health awareness campaigns",
+            "Support systems for disease eradication"
+        ]
+    },
+    {
+        "slug": "environment-biodiversity",
+        "title": "Environment and Biodiversity",
+        "overview": "We believe natural resource and biodiversity management are vital for improving rural development. We focus on developing resource endowments like land and forestry.",
+        "activities": [
+            "Ecological Agriculture and Watershed Management",
+            "Conservation of Local Species and Heritages",
+            "Disaster Risk Reduction (DRR) and Climate Change resilience"
+        ]
+    },
+    {
+        "slug": "renewable-energy",
+        "title": "Renewable Energy",
+        "overview": "Renewable energy has been considered an important aspect not only for rural livelihoods but also for overall national development.",
+        "activities": [
+            "Improving access to energy for targeted beneficiaries",
+            "Focusing on both primary generation and end-use",
+            "Promoting safe and sustainable technologies"
+        ]
+    }
+]

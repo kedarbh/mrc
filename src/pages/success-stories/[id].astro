@@ -1,0 +1,106 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection, render } from "astro:content";
+import StoryCard from "@components/story/StoryCard.astro";
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories');
+  return stories.map(story => ({
+    params: { id: story.id },
+    props: { story },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+
+const allStories = await getCollection('stories');
+const relatedStories = allStories
+    .filter(s => s.id !== story.id)
+    .sort((a,b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf())
+    .slice(0, 3);
+---
+
+<Layout>
+  <!-- Hero Section (Immersive Background) -->
+  <section class="relative h-[70vh] min-h-[600px] flex items-end pb-32 justify-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <Image 
+            src={story.data.coverImage} 
+            alt={story.data.title} 
+            class="w-full h-full object-cover object-top bg-green-900"
+        />
+        <!-- Premium Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-gray-900/20"></div>
+    </div>
+    
+    <!-- Hero Text Content -->
+    <div class="wrapper relative z-10 w-full">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Date Badge -->
+        <span class="inline-block py-1.5 px-5 rounded-full bg-secondary text-white text-xs font-bold tracking-widest uppercase mb-6 shadow-xl border border-secondary/50">
+            {new Date(story.data.publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </span>
+        
+        <!-- Story Title -->
+        <h1 class="text-4xl md:text-5xl lg:text-[56px] font-extrabold text-white leading-tight mb-8 drop-shadow-lg text-balance">
+           {story.data.title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prose Content Section (Overlapping) -->
+  <section class="wrapper relative z-20 -mt-20 mb-20">
+     
+     <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 md:p-14 lg:p-20 relative overflow-hidden">
+        <!-- Decorative subtle element inside card -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+        
+        <!-- Premium Excerpt / Lead Paragraph -->
+        <div class="mb-14 relative">
+             <div class="absolute -left-6 top-0 w-1.5 h-full bg-secondary rounded-full hidden md:block"></div>
+             <p class="text-2xl md:text-3xl text-gray-800 font-serif leading-relaxed italic border-l-4 md:border-l-0 border-secondary pl-6 md:pl-0">
+                "{story.data.description}"
+             </p>
+        </div>
+
+        <!-- Rendered Markdown Content using Tailwind Typography -->
+        <article class="prose prose-lg md:prose-xl prose-gray max-w-none 
+          prose-headings:font-bold prose-headings:text-gray-900 
+          prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+          prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
+          prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+          prose-blockquote:border-l-primary prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:rounded-r-xl
+          prose-li:text-gray-700
+          prose-img:rounded-2xl prose-img:shadow-xl">
+            <Content />
+        </article>
+        
+        <!-- Back Button (Removed as we have "View All Stories" below) -->
+     </div>
+  </section>
+
+  <!-- Related Stories Section -->
+  <section class="wrapper py-20 border-t border-gray-100">
+     <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">More Success Stories</h2>
+        <p class="text-gray-600">Discover more inspiring journeys of transformation and empowerment.</p>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {
+          relatedStories.map((relatedStory) => (
+             <StoryCard story={relatedStory} />
+          ))
+        }
+     </div>
+     <div class="mt-16 text-center">
+         <a href="/success-stories" class="btn-outlined inline-flex items-center gap-2">
+            View All Stories &rarr;
+         </a>
+     </div>
+  </section>
+</Layout>

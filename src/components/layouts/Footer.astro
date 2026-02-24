@@ -1,68 +1,112 @@
 ---
 import Social from "./Social.astro";
 import { Icon } from 'astro-icon/components';
-
-
 ---
 
-<footer class="mt-12 footer bg-primary/20">
-    <div class="py-10 grid grid-cols-1 md:grid-cols-3 gap-2 items-center justify-between wrapper">
-      <div class="">
-        <div class="flex items-center space-x-4">
-          <img src="../images/logo.svg" alt="" class="h-20" />
-          <div>
-            <h2 class="font-bold">MRC Nepal</h2>
-            <p class="text-xs">Facilitating for Self-Reliant Society</p>
-            <Social />
-          </div>
-        </div>
-      </div>
-      <div class="text-xs">
-        <div>
-          <p class="font-bold py-2">
-            <span class="border-b py-1 border-primary">Head Office:</span>
-          </p>
-          <p>Dhapasi-1, Kathmandu</p>
-        </div>
-        <div>
-          <p class="font-bold py-2">
-            <span class="border-b py-1 border-primary">
-              Operational Office:
-            </span>
-          </p>
-          <p>87, Birendra Path, Huprachaur</p>
-          <p>Hetauda, Makawanpur</p>
-          <p>P.O.Box 80 Nepal</p>
-        </div>
-      </div>
-      <div class="">
-        <div>
-          <div class="mt-4 flex items-center space-x-6">
-            <div class="flex items-center justify-center h-8 w-8 rounded-md bg-primary">
-                <Icon name="phone" class="h-6 w-6 text-white"/>
-              
-            </div>
-            <div class="text-xs leading-tight">
-              <p>+977 (1) 4375024</p>
-              <p>+977 (57) 526651</p>
-            </div>
-          </div>
-          <div class="flex items-center space-x-6">
-            <div class="mt-1 flex items-center justify-center h-8 w-8 rounded-md bg-primary">
-                <Icon name="email" class="h-6 w-6 text-white"/>
-              
-            </div>
-            <p class="text-sm">info@mrcnepal.org.np</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="px-4 py-4 bg-green-50/50 border-t-2 border-primary">
-     <div class="wrapper">
-        <p class="text-xs font-medium">
-            © {new Date().getFullYear()}, Multi-Dimensional Resource Center Nepal
-        </p>
-     </div>
-    </div>
-  </footer>
+<footer class="mt-20 footer bg-green-900 text-white/80 border-t-4 border-secondary relative overflow-hidden">
+    <!-- Subtle Background Texture -->
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
 
+    <div class="wrapper pt-16 pb-12 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 justify-between">
+            
+            <!-- Column 1: Brand & About -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-2 rounded-xl shadow-lg inline-block">
+                        <img src="/images/logo.svg" alt="MRC Nepal Logo" class="h-14 w-auto drop-shadow-sm" />
+                    </div>
+                </div>
+                <!-- TODO: verify if it makes sense to use full name -->
+                <h2 class="font-extrabold text-white text-2xl tracking-tight leading-none">MRC Nepal</h2>
+                <p class="text-sm leading-relaxed pr-4 font-medium text-white/70">
+                    Empowering rural communities through sustainable agriculture and capacity building for a self-reliant society.
+                </p>
+                <div class="pt-2">
+                    <Social />
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="font-bold text-white text-lg mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Quick Links
+                </h3>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="/" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">Home</a></li>
+                    <li><a href="/about" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">About Us</a></li>
+                    <li><a href="/programs/agriculture" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">Our Programs</a></li>
+                    <li><a href="/success-stories" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">Success Stories</a></li>
+                    <li><a href="/volunteer" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">Volunteer</a></li>
+                    <li><a href="/contact" class="hover:text-secondary hover:translate-x-1 transition-all duration-300 inline-block">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Office Locations -->
+            <div>
+                <h3 class="font-bold text-white text-lg mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Our Offices
+                </h3>
+                <div class="space-y-6 text-sm">
+                    <div>
+                        <p class="font-bold text-white mb-1">Head Office</p>
+                        <p class="text-white/70 leading-relaxed">Dhapasi-1, Kathmandu</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-1">Operational Office</p>
+                        <p class="text-white/70 leading-relaxed">Hetauda Municipality, Ward No. 4<br />Birendra Path, Huprachaur<br />P.O.Box: 80, Makawanpur</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact & Newsletter -->
+            <div>
+                <h3 class="font-bold text-white text-lg mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Get in Touch
+                </h3>
+                <div class="space-y-4">
+                    <a href="tel:+97714375024" class="flex items-start space-x-4 group hover:text-white transition-colors duration-300">
+                        <div class="flex items-center justify-center mt-0.5 h-10 w-10 min-w-[40px] rounded-full bg-white/10 group-hover:bg-secondary transition-colors text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.265-3.965-6.861-6.86l1.294-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                            </svg>
+                        </div>
+                        <div class="text-sm leading-relaxed text-white">
+                            <p>+977 (1) 4375024</p>
+                            <p>+977 (57) 526651</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:info@mrcnepal.org.np" class="flex items-center space-x-4 group hover:text-white transition-colors duration-300 mt-2">
+                        <div class="flex items-center justify-center h-10 w-10 min-w-[40px] rounded-full bg-white/10 group-hover:bg-secondary transition-colors text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                            </svg>
+                        </div>
+                        <div class="text-sm text-white">
+                            <p>info@mrcnepal.org.np</p>
+                            <p>mrcnepal@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="py-6 bg-green-950/80 border-t border-white/10 relative z-10 backdrop-blur-sm">
+        <div class="wrapper flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-sm text-white/50">
+            <p>
+                &copy; {new Date().getFullYear()} Multi-Dimensional Resource Center Nepal. All Rights Reserved.
+            </p>
+            <!-- <div class="flex items-center gap-6">
+                <a href="/contact" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/contact" class="hover:text-white transition-colors">Terms of Service</a>
+            </div> -->
+        </div>
+    </div>
+</footer>

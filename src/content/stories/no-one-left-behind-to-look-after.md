@@ -1,16 +1,21 @@
 ---
-title: "No One Left behind to Look after"
-description: 'Mr Jaya Bahadur Syintan, a 38 year old resident of a rural village in Makawanpur district in Nepal, introduced himself as a "landless poor having no family members, a flood affected victim". Seven months before the interview, Jaya was troubled by a heavy cough and fever and noticed an uncharacteristic distaste for food. The symptoms progressively worsened to the point that he lost nearly a third of his body weight within six months.'
-coverImage: "@assets/images/stories/no-one-left-behid-to-look-after.webp"
+title: "No One Left Behind: A Journey Back to Health and Hope"
+description: "At 38, Jaya Bahadur Syintan described himself as a 'landless, flood-affected victim with no family.' Grappling with severe, undiagnosed tuberculosis that drove him into deep poverty, MRC Nepal stepped in to help him reclaim his health and his future."
+coverImage: "../../assets/images/stories/no-one-left-behid-to-look-after.webp"
 publishedDate: "2012-08-28T05:35:07.322Z"
 ---
 
-Mr Jaya Bahadur Syintan, a 38 year old resident of a rural village in Makawanpur district in Nepal, introduced himself as a "landless poor having no family members, a flood affected victim". Seven months before the interview, Jaya was troubled by a heavy cough and fever and noticed an uncharacteristic distaste for food. The symptoms progressively worsened to the point that he lost nearly a third of his body weight within six months. His wife and three kids left when his illness left him unable to work and provide for the family.
+When 38-year-old Jaya Bahadur Syintan from rural Makawanpur introduced himself, his words were steeped in despair. He described himself bluntly: *"a landless poor man with no family, a victim of the floods."* 
 
-At this point, Jaya was diagnosed with a variety of minor illnesses when he visited the local health post. After his physical examination, he was instructed to take medicines for his fever, as well as vitamins and cough syrup. In all, Jaya spent roughly 30,000 Nepalese Rupee (over USD 420) on treatment that did little to relieve his suffering and drove him further into poverty.
+Seven months prior, a persistent, heavy cough and fever began to relentlessly drain his energy, accompanied by a sudden, complete loss of appetite. Over the span of just six months, his undiagnosed condition deteriorated so drastically that he lost nearly a third of his body weight. Unable to work or provide, his tragic circumstance fractured his family, leaving him entirely alone. 
 
-MRC Nepal was contacted by Jaya, who had heard their STOP TB messages being spread around the village. When they arrived, he was seriously ill and lying down on the mat inside his hut. He was hardly able to speak with MRC Nepal staff to describe his illness. However, MRC staff brought him immediately to the local Health post, where he was referred to the District hospital for a TB diagnosis.
+Desperate for relief, Jaya visited a local health post where he received a series of misdiagnoses for minor ailments. He was prescribed over-the-counter fever reducers, vitamins, and cough syrup. Ultimately, Jaya spent roughly NPR 30,000 (over USD 420)—a devastating sum for a struggling laborer—on treatments that provided absolutely no relief and instead drove him deeper into profound poverty.
 
-Since his diagnosis, he has kept to a regular schedule of taking his TB medicine. He is slowly but surely regaining his weight, and his other symptoms have reduced dramatically.
+### A Critical Intervention
+Awareness of Jaya's critical situation reached MRC Nepal through community members who had heard the organization's widespread *STOP TB* awareness campaign. When the MRC field team arrived at his hut, Jaya was severely emaciated, bedridden, and barely able to speak. Recognizing the unmistakable signs of advanced Tuberculosis, the MRC staff sprang into immediate action. They safely transported him to the local health post, instantly securing a referral to the District Hospital for a comprehensive TB diagnosis.
 
-Mr Jaya Bahadur thanked MRC Nepal and the Stop TB Partnership Challenge Facility for Civil Society; "because of their contribution I live and survive and dream brighter future of life. Admiring thanks to god, thanks to Stop TB partnership, and thanks to MRC Nepal giving me new life."
+The diagnosis was confirmed, and Jaya was immediately enrolled in a structured treatment program. Since that life-saving intervention, he has maintained a strict regimen, taking his TB medication regularly. Slowly but surely, the heavy cough has faded, his appetite has returned, and he is steadily regaining a healthy weight.
+
+> "Because of their intervention, I am alive. I survived, and now I can dream of a brighter future."
+
+Reflecting on his journey from the brink, Mr. Jaya expressed his profound gratitude: "I give admiring thanks to God, the Stop TB Partnership, and MRC Nepal. They didn't just provide medical help; they gave me a completely new life."
