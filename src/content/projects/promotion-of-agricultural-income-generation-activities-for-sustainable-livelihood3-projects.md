@@ -4,7 +4,7 @@ description: "Livelihood"
 startDate: "2019-01-01"
 endDate: "2021-12-31"
 status: "completed"
-donor: "devghat-rural-municipality"
+donor: "Devghat Rural Municipality"
 location: "Tanahu"
 ---
 

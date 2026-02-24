@@ -4,7 +4,7 @@ description: "Solar Lift water pumping Irrigation"
 startDate: "2016-01-01"
 endDate: "2019-12-31"
 status: "completed"
-donor: "practical-action"
+donor: "Practical Action"
 location: "Makwanpur"
 ---
 

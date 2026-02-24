@@ -4,7 +4,7 @@ description: "Trainings on on-farm (vegetable production) and off-farm (candle m
 startDate: "2009-01-01"
 endDate: "2010-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Makwanpur"
 ---
 

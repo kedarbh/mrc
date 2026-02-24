@@ -4,7 +4,7 @@ description: "Capacity building on WASH"
 startDate: "2011-01-01"
 endDate: "2012-12-31"
 status: "completed"
-donor: "mrc-and-giz"
+donor: "MRC Nepal and GIZ"
 location: "Surkhet, Makwanpur"
 ---
 

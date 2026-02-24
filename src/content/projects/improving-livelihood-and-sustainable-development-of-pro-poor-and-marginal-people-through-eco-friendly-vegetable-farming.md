@@ -4,7 +4,7 @@ description: "Promotion of eco-friendly farming"
 startDate: "2010-01-01"
 endDate: "2011-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Makwanpur and Chitwan"
 ---
 

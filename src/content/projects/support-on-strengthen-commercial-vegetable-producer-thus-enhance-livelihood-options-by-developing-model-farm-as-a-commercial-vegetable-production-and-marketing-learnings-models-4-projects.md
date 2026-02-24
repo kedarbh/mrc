@@ -4,7 +4,7 @@ description: "Organic vegetable farming promotion, capacity building trainings a
 startDate: "2011-01-01"
 endDate: "2014-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Kapilvastu and Chitwan"
 ---
 

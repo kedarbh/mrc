@@ -4,7 +4,7 @@ description: "Organic vegetable farming, home gardening promotion and capacity b
 startDate: "2011-01-01"
 endDate: "2014-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Kailali, Bardiya, Banke, Surkhet, Dang, Morang,  Illam  and Sunsari"
 ---
 

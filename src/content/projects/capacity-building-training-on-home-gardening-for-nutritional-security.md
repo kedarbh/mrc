@@ -4,7 +4,7 @@ description: "Input support, capacity building and organic farming"
 startDate: "2011-01-01"
 endDate: "2012-12-31"
 status: "completed"
-donor: "mrc-nepal-and-ddc"
+donor: "MRC Nepal and DDC"
 location: "Makwanpur"
 ---
 

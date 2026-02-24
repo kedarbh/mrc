@@ -4,7 +4,7 @@ description: "Watershed management and DRR"
 startDate: "2019-01-01"
 endDate: "2020-12-31"
 status: "completed"
-donor: "usaiddai-paani-project"
+donor: "USAID/DAI-Paani Project"
 location: "Dang"
 ---
 

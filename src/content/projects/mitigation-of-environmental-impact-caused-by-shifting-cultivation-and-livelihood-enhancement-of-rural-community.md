@@ -4,7 +4,7 @@ description: "Agroforestry, Organic vegetable farming promotion, plantation of A
 startDate: "2014-01-01"
 endDate: "2016-12-31"
 status: "completed"
-donor: "usaidwwfcarefeccofunntnc"
+donor: "USAID/WWF/CARE/FECCOFUN/NTNC"
 location: "Kaski and Tanahu"
 ---
 

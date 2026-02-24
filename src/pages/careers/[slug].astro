@@ -1,0 +1,113 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+export async function getStaticPaths() {
+    const careers = await getCollection('careers');
+    return careers.map(job => ({
+        params: { slug: job.id },
+        props: { job },
+    }));
+}
+
+const { job } = Astro.props;
+const { Content } = await render(job);
+
+const formattedDeadline = new Date(job.data.deadline).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+const deadlineDate = new Date(job.data.deadline);
+deadlineDate.setHours(23, 59, 59, 999);
+const isExpired = deadlineDate < today;
+---
+
+<Layout title={`${job.data.title} - Careers | MRC Nepal`}>
+    <!-- Header Page -->
+    <section class="relative bg-green-900 text-white py-24 overflow-hidden pt-36">
+        <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+        <div class="wrapper relative z-10 max-w-4xl mx-auto">
+            <a href="/careers" class="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 font-medium">
+                &larr; Back to Careers
+            </a>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
+                {job.data.title}
+            </h1>
+            
+            <div class="flex flex-wrap items-center gap-6 text-white/90 font-medium pb-4 border-b border-white/20">
+                <div class="flex items-center gap-2">
+                    <Icon name="location" class="w-5 h-5 text-secondary" />
+                    <span>{job.data.location}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <Icon name="volunteer" class="w-5 h-5 text-secondary" />
+                    <span>{job.data.type}</span>
+                </div>
+                {job.data.department && (
+                    <div class="flex items-center gap-2">
+                        <Icon name="education" class="w-5 h-5 text-secondary" />
+                        <span>{job.data.department}</span>
+                    </div>
+                )}
+                <div class={`flex items-center gap-2 ${isExpired ? 'text-red-300' : ''}`}>
+                    <Icon name="calendar" class="w-5 h-5 text-secondary" />
+                    <span>Deadline: {formattedDeadline} {isExpired && "(Expired)"}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Content -->
+    <section class="py-20 bg-gray-50 border-b border-gray-100">
+        <div class="wrapper grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <article class="prose prose-lg prose-green max-w-none bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                    <Content />
+                </article>
+            </div>
+            
+            <!-- Sidebar / Apply Box -->
+            <div class="lg:col-span-1">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 sticky top-32">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Ready to Apply?</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        {isExpired 
+                            ? "We are no longer accepting applications for this position. Thank you for your interest."
+                            : "If you meet the qualifications and are excited to join our mission, we would love to hear from you. Please submit your resume and cover letter before the deadline."
+                        }
+                    </p>
+                    
+                    {isExpired ? (
+                        <button 
+                          disabled
+                          class="bg-gray-100 border border-gray-200 text-gray-400 w-full inline-flex justify-center items-center gap-2 py-4 text-lg rounded-xl font-bold cursor-not-allowed"
+                        >
+                            Not Accepting Applications
+                        </button>
+                    ) : (
+                        <a 
+                          href={`mailto:info@mrcnepal.org.np?subject=Application for ${job.data.title}`} 
+                          class="btn-primary w-full inline-flex justify-center items-center gap-2 py-4 text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform"
+                        >
+                            Apply via Email <Icon name="paper-plane" class="w-5 h-5" />
+                        </a>
+                    )}
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <p class="text-sm text-gray-500 text-center">
+                            <strong>Deadline:</strong><br/>
+                            {formattedDeadline}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

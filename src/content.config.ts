@@ -22,7 +22,7 @@ const partners = defineCollection({
     z.object({
       name: z.string(),
       description: z.string(),
-      website: z.string().url().optional(),
+      website: z.string().optional(),
       logo: image().optional(),
     }),
 });
@@ -36,10 +36,22 @@ const projects = defineCollection({
       startDate: z.coerce.date().optional(),
       endDate: z.coerce.date().optional(),
       status: z.enum(["ongoing", "completed", "planned"]).default("ongoing"),
-      donor: reference("partners").optional(),
+      donor: z.string().optional(),
       location: z.string().optional(),
       coverImage: image().optional(),
     }),
 });
 
-export const collections = { stories, partners, projects };
+const careers = defineCollection({
+  loader: glob({ base: "./src/content/careers", pattern: "**/*.md" }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      location: z.string(),
+      type: z.enum(["Full-time", "Part-time", "Contract", "Consultant", "Volunteer"]),
+      deadline: z.coerce.date(),
+      department: z.string().optional(),
+    }),
+});
+
+export const collections = { stories, partners, projects, careers };

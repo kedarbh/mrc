@@ -4,7 +4,7 @@ description: "Trainings on home gardening, organic farming, institutional develo
 startDate: "2011-01-01"
 endDate: "2013-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Makwanpur"
 ---
 

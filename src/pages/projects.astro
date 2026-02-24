@@ -14,12 +14,7 @@ projectsEntries.sort((a, b) => {
 
 const projects = await Promise.all(
   projectsEntries.map(async (project) => {
-    let donorName = "Various / Self Funded";
-    if (project.data.donor) {
-      const donorEntry = await getEntry(project.data.donor);
-      // Fallback to the ID if name not found in the partner markdown
-      donorName = donorEntry?.data.name || project.data.donor.id;
-    }
+    let donorName = project.data.donor || "Various / Self Funded";
     
     // format period
     const startYear = project.data.startDate ? new Date(project.data.startDate).getFullYear() : "";

@@ -4,7 +4,7 @@ description: "Livelihood"
 startDate: "2018-01-01"
 endDate: "2019-12-31"
 status: "completed"
-donor: "sfabc-nepal"
+donor: "SF/ABC Nepal"
 location: "Rupandehi"
 ---
 

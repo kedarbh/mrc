@@ -4,7 +4,7 @@ description: "Utilization of wastage river bed land through organic vegetable fa
 startDate: "2012-01-01"
 endDate: "2017-12-31"
 status: "completed"
-donor: "opecofid"
+donor: "OPEC/OFID"
 location: "Bara, Makwanpur,Parsa and Chitwan"
 ---
 

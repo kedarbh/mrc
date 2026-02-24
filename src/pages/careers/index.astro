@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const allCareers = await getCollection("careers");
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+// Filter out past deadlines and sort by closest deadline (job.data.deadline is already a Date object from Zod)
+const careers = allCareers
+    .filter(job => {
+        if (!job.data.deadline) return true;
+        const deadlineDate = new Date(job.data.deadline);
+        deadlineDate.setHours(23, 59, 59, 999); // Set to end of deadline day
+        return deadlineDate >= today;
+    })
+    .sort((a, b) => new Date(a.data.deadline).getTime() - new Date(b.data.deadline).getTime());
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <section class="relative bg-green-900 text-white py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-primary/20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+    <div class="wrapper relative z-10 text-center max-w-4xl mx-auto">
+      <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-medium text-sm mb-6 uppercase tracking-wider">
+        Join Our Mission
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Build a Career with <span class="text-secondary">Purpose</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+        At MRC Nepal, we are always looking for passionate individuals who want to make a lasting impact on rural communities. Discover opportunities to grow professionally while contributing to sustainable development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Work Culture / Perks -->
+  <section class="py-24 bg-white border-b border-gray-100">
+    <div class="wrapper">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover what makes MRC Nepal a great place to build your career and make a difference.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary">
+            <Icon name="location" class="w-8 h-8" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Grassroots Impact</h3>
+          <p class="text-gray-600 leading-relaxed text-sm">Work directly with communities to implement sustainable solutions that improve livelihoods on the ground.</p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-secondary">
+            <Icon name="users" class="w-8 h-8" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Inclusive Culture</h3>
+          <p class="text-gray-600 leading-relaxed text-sm">Join a diverse team that values equity, collaboration, and continuous learning in a supportive environment.</p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 text-center hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-blue-600">
+            <Icon name="chart" class="w-8 h-8" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Growth</h3>
+          <p class="text-gray-600 leading-relaxed text-sm">Expand your skill set through hands-on project management, capacity-building programs, and leadership opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Positions -->
+  <section class="py-24 bg-gray-50">
+    <div class="wrapper">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Open Positions</h2>
+        <p class="text-gray-600">Explore current job opportunities and find your next role at MRC Nepal.</p>
+      </div>
+
+      {careers.length > 0 ? (
+        <div class="space-y-6">
+          {careers.map((job) => (
+            <a href={`/careers/${job.id}`} class="block group">
+              <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm group-hover:shadow-md group-hover:border-primary/50 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">{job.data.title}</h3>
+                  <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                    <span class="flex items-center gap-1"><Icon name="location" class="w-4 h-4" /> {job.data.location}</span>
+                    <span class="flex items-center gap-1"><Icon name="briefcase" class="w-4 h-4" /> {job.data.type}</span>
+                    {job.data.department && (
+                      <span class="flex items-center gap-1"><Icon name="folder" class="w-4 h-4" /> {job.data.department}</span>
+                    )}
+                  </div>
+                </div>
+                <div class="flex flex-col items-end shrink-0">
+                  <span class="text-sm font-semibold text-secondary mb-2 whitespace-nowrap">Deadline: {new Date(job.data.deadline).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  <span class="text-primary font-bold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">View Details <Icon name="arrow-right" class="w-4 h-4" /></span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="bg-white p-12 rounded-3xl border border-gray-200 shadow-sm text-center">
+          <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-6 text-gray-300 border border-gray-200">
+            <Icon name="briefcase" class="w-8 h-8" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">No Open Positions Currently</h3>
+          <p class="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+            Thank you for your interest in joining MRC Nepal! While we don't have any specific roles open at the moment, our dynamic projects often create new opportunities.
+          </p>
+          <div class="bg-gray-50 inline-block p-6 rounded-2xl border border-gray-100 text-left max-w-lg mx-auto">
+            <p class="text-gray-700 font-medium mb-2">Want to be considered for future roles?</p>
+            <p class="text-gray-600 text-sm mb-4">You can spontaneously submit your resume to us. We regularly review our talent pool when new projects launch.</p>
+            <a href="mailto:info@mrcnepal.org.np?subject=Spontaneous%20Application" class="inline-flex items-center gap-2 text-primary font-bold hover:text-green-800 transition-colors">
+              <Icon name="email" class="w-5 h-5" />
+              Email Your Resume to info@mrcnepal.org.np
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

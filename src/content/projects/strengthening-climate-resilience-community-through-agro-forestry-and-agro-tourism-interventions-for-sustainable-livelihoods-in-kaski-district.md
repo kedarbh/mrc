@@ -4,7 +4,7 @@ description: "Climate Change Mitigation and Livelihood"
 startDate: "2023-01-01"
 endDate: "2025-12-31"
 status: "completed"
-donor: "undpgefsgp-unops"
+donor: "UNDP/GEF/SGP-UNOPS"
 location: "Kaski District"
 ---
 

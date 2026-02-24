@@ -4,7 +4,7 @@ description: "Interventions of off-farm and on-farm activities"
 startDate: "2015-01-01"
 endDate: "2017-12-31"
 status: "completed"
-donor: "tear-fund-nepal"
+donor: "Tear Fund Nepal"
 location: "Makwanpur"
 ---
 

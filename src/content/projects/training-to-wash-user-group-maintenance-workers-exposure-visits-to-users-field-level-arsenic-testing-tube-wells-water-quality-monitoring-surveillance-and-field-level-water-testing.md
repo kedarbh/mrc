@@ -4,7 +4,7 @@ description: "Capacity building on WASH at local level"
 startDate: "2011-01-01"
 endDate: "2012-12-31"
 status: "completed"
-donor: "mrc"
+donor: "Self Funded"
 location: "Bara, Mawanpur"
 ---
 

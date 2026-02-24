@@ -4,7 +4,7 @@ description: "Climate Change and Livelihood"
 startDate: "2017-01-01"
 endDate: "2019-12-31"
 status: "completed"
-donor: "undpgefsgp"
+donor: "UNDP/GEF/SGP"
 location: "Tanahu District"
 ---
 

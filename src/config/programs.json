@@ -2,17 +2,38 @@
     {
         "slug": "sustainable-livelihood",
         "title": "Sustainable Livelihood",
-        "overview": "MRC Nepal supports tackling poverty among the poorest of the poor by promoting entrepreneurship in agriculture and non-agricultural base enterprises such as goats, pigs, fishery, off-season vegetables, NTFP, herbs, and dairy.",
+        "overview": "At the heart of MRC Nepal's mission is the commitment to eradicating extreme poverty among marginalized communities. We champion sustainable livelihood by fostering resilient agricultural practices, advancing food and nutritional security, and facilitating access to microfinance. Through targeted entrepreneurship development, integrated community programs, and the establishment of basic infrastructure, we empower individuals to achieve economic independence and long-term prosperity.",
         "activities": [
-            "Food and Nutritional Security for rural and vulnerable communities",
-            "Promotion of small to medium enterprises",
-            "Integrated Community Development through subsistence agriculture"
+            "Food and Nutritional Security",
+            "Integrated Community Development",
+            "Saving Credit and Micro Financing",
+            "Entrepreneurship Development",
+            "Basic Infrastructures and Services"
+        ]
+    },
+    {
+        "slug": "environment-biodiversity",
+        "title": "Environment and Biodiversity",
+        "overview": "We recognize that the sustainable management of natural resources is fundamentally linked to the survival and prosperity of rural communities. Our environmental initiatives focus on preserving biodiversity, restoring critical watersheds, and safeguarding local species and heritage. By promoting ecological agriculture and implementing robust Disaster Risk Reduction (DRR) and climate change adaptation strategies, we ensure that communities can thrive amidst environmental challenges while protecting nature for future generations.",
+        "activities": [
+            "Natural Resources and Biodiversity Management",
+            "Water and Watershed Management",
+            "Conservation of Local Species and Heritages",
+            "Disaster Risk Reduction (DRR) and Climate Change (CC)"
         ]
     },
     {
         "slug": "education",
-        "title": "Education and Human Rights",
-        "overview": "Information and education are fundamental cornerstones for sustainable development. We promote child rights, self-governance, and peace-building conflict resolution approaches.",
+        "title": "Education",
+        "overview": "Education is a transformative force that breaks the cycle of poverty and inequality. We are dedicated to enhancing access to quality education and empowering marginalized youth and adults alike. By integrating Information Communication Technology (ICT) into our educational initiatives, we bridge the digital divide, foster lifelong learning, and equip individuals with the critical knowledge and modern tools necessary to participate effectively in today's interconnected world.",
+        "activities": [
+            "Information Communication Technology (ICT)"
+        ]
+    },
+    {
+        "slug": "human-rights",
+        "title": "Human Rights and Social Justice",
+        "overview": "True development cannot occur without a foundation of equity, justice, and respect for fundamental human rights. We actively work to empower disadvantaged groups by advancing civic education, eliminating discrimination, and promoting social inclusion. Through deliberate conflict resolution, peace-building initiatives, and the implementation of conflict-sensitive approaches, we strive to build harmonious, just, and cohesive societies where every voice is heard and valued.",
         "activities": [
             "Conflict Resolution and Peace Building",
             "Promoting awareness on financial education and management",
@@ -22,7 +43,7 @@
     {
         "slug": "health-sanitation",
         "title": "Health and Sanitation",
-        "overview": "Access to sustainable, reliable, safe water supply and environmental sanitation facilities is a basic human right. We work to eradicate preventable diseases and provide critical health support.",
+        "overview": "We believe that access to safe water, proper sanitation, and essential healthcare is a fundamental human right. Our comprehensive health and sanitation programs focus on eradicating preventable diseases, improving maternal and child nutrition, and delivering critical basic health services. By heavily emphasizing Water, Sanitation, and Hygiene (WASH) initiatives and establishing ecological health practices, we lay the groundwork for healthier, more resilient communities.",
         "activities": [
             "Water, Sanitation and Hygiene (WASH) programs",
             "Health awareness campaigns",
@@ -30,23 +51,14 @@
         ]
     },
     {
-        "slug": "environment-biodiversity",
-        "title": "Environment and Biodiversity",
-        "overview": "We believe natural resource and biodiversity management are vital for improving rural development. We focus on developing resource endowments like land and forestry.",
-        "activities": [
-            "Ecological Agriculture and Watershed Management",
-            "Conservation of Local Species and Heritages",
-            "Disaster Risk Reduction (DRR) and Climate Change resilience"
-        ]
-    },
-    {
         "slug": "renewable-energy",
         "title": "Renewable Energy",
-        "overview": "Renewable energy has been considered an important aspect not only for rural livelihoods but also for overall national development.",
+        "overview": "Access to reliable and clean energy is a critical driver for both rural livelihoods and national development. MRC Nepal is committed to transforming rural landscapes by promoting the adoption of renewable energy technologies and eco-friendly end-use solutions, such as clean cooking technologies. These initiatives not only significantly improve public health by reducing indoor air pollution but also protect the environment by decreasing reliance on traditional, unsustainable biomass.",
         "activities": [
             "Improving access to energy for targeted beneficiaries",
             "Focusing on both primary generation and end-use",
-            "Promoting safe and sustainable technologies"
+            "Promoting safe and sustainable technologies",
+            "Renewable Energy (and end-use)"
         ]
     }
 ]

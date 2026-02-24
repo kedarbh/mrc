@@ -4,7 +4,7 @@ description: "Organic vegetable farming, small livestock promotion and capacity 
 startDate: "2013-01-01"
 endDate: "2014-12-31"
 status: "completed"
-donor: "gizstpp"
+donor: "GIZ/STPP"
 location: "Chitwan and Nawalparasi"
 ---
 

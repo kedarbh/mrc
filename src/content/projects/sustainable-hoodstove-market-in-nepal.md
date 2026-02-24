@@ -4,7 +4,7 @@ description: "Improved Hood Stove installation for reducing indoor pollution and
 startDate: "2015-01-01"
 endDate: "2019-12-31"
 status: "completed"
-donor: "gizendevpractical-action"
+donor: "GIZ/ENDEV/Practical Action"
 location: "Makwanpur"
 ---
 

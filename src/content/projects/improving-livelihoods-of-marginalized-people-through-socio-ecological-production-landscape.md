@@ -4,7 +4,7 @@ description: "Organic vegetable farming promotion, plantation of Amriso, Bamboo 
 startDate: "2013-01-01"
 endDate: "2014-12-31"
 status: "completed"
-donor: "undp-gefsgp"
+donor: "UNDP/GEF/SGP"
 location: "Makwanpur"
 ---
 

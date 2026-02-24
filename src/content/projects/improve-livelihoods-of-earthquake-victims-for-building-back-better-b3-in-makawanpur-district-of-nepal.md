@@ -4,7 +4,7 @@ description: "Relief and support program(Livelihood, WASH, Education, Irrigation
 startDate: "2015-01-01"
 endDate: "2017-12-31"
 status: "completed"
-donor: "stromme-foundation"
+donor: "Stromme Foundation"
 location: "Makwanpur"
 ---
 

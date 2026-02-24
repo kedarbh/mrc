@@ -4,7 +4,7 @@ description: "Promotion of homestead ecological gardening, increase awareness on
 startDate: "2009-01-01"
 endDate: "2010-12-31"
 status: "completed"
-donor: "mrc-nepal-and-dado"
+donor: "MRC Nepal and DADO"
 location: "Makwanpur"
 ---
 

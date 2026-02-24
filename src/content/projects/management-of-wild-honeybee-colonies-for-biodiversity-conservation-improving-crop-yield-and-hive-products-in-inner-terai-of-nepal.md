@@ -4,7 +4,7 @@ description: "Habitat conservation through plantation, capacity building and org
 startDate: "2012-01-01"
 endDate: "2013-12-31"
 status: "completed"
-donor: "undp-gefsgp"
+donor: "UNDP/GEF/SGP"
 location: "Bara"
 ---
 

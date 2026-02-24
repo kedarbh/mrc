@@ -4,7 +4,7 @@ description: "Livelihood"
 startDate: "2020-01-01"
 endDate: "2022-12-31"
 status: "completed"
-donor: "undpgefsgp"
+donor: "UNDP/GEF/SGP"
 location: "Tanahu"
 ---
 

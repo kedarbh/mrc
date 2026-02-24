@@ -4,7 +4,7 @@ description: "Awareness increase and treatment of TB affected people"
 startDate: "2012-01-01"
 endDate: "2013-12-31"
 status: "completed"
-donor: "stop-tb-partnership"
+donor: "Stop TB Partnership"
 location: "Makwanpur"
 ---
 
