@@ -111,11 +111,16 @@ import { Icon } from "astro-icon/components";
     </div>
   </section>
 
-  <!-- Map Placeholder (Optional) -->
-  <section class="h-96 bg-gray-200 w-full relative">
-     <!-- Note: In a real scenario, this would be an iframe from Google Maps -->
-     <div class="absolute inset-0 flex items-center justify-center">
-         <p class="text-gray-500 font-medium">Interactive Map Placeholder</p>
-     </div>
+  <!-- Interactive Map -->
+  <section class="h-96 w-full relative">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.483393670102!2d85.03356511441525!3d27.421470982910505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb49edf97a88fb%3A0xa7e42a2d8ebd2e53!2sMRC%20Nepal!5e0!3m2!1sen!2snp!4v1590952039528!5m2!1sen!2snp"
+      class="w-full h-full border-0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
   </section>
 </Layout>

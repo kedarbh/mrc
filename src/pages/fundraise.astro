@@ -1,6 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+import GlobalGivingProjects from '../components/GlobalGivingProjects.astro';
+
+const localBankDetails = {
+    accountName: "MRC Nepal",
+    bankName: "Nepal Bank Limited",
+    accountNumber: "xxxx-xxx-xxx-xxx",
+    branch: "Kathmandu Main Branch"
+};
+
+const intlBankDetails = {
+    accountName: "MRC Nepal",
+    bankName: "Standard Chartered Bank Nepal",
+    swiftCode: "SCBLNPKA",
+    routingNo: "0104",
+    accountNumber: "xxxx-xxx-xxx-xxx"
+};
 ---
 
 <Layout title="Fundraise | MRC Nepal">
@@ -159,19 +175,19 @@ import { Icon } from 'astro-icon/components';
                             <div class="space-y-6">
                                 <div class="pb-4 border-b border-white/10">
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Account Name</p>
-                                    <p class="font-bold text-xl tracking-wide">MRC Nepal</p>
+                                    <p class="font-bold text-xl tracking-wide">{localBankDetails.accountName}</p>
                                 </div>
                                 <div class="pb-4 border-b border-white/10">
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Bank Name</p>
-                                    <p class="font-bold text-xl tracking-wide">Nepal Bank Limited</p>
+                                    <p class="font-bold text-xl tracking-wide">{localBankDetails.bankName}</p>
                                 </div>
                                 <div class="pb-4 border-b border-white/10">
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Account Number</p>
-                                    <p class="font-mono text-xl tracking-wide font-bold">0020-1100-3344-5566</p>
+                                    <p class="font-mono text-xl tracking-wide font-bold">{localBankDetails.accountNumber}</p>
                                 </div>
                                 <div>
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Branch</p>
-                                    <p class="font-bold text-xl tracking-wide">Kathmandu Main Branch</p>
+                                    <p class="font-bold text-xl tracking-wide">{localBankDetails.branch}</p>
                                 </div>
                             </div>
                         </div>
@@ -189,25 +205,25 @@ import { Icon } from 'astro-icon/components';
                             <div class="space-y-6">
                                 <div class="pb-4 border-b border-white/10">
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Account Name</p>
-                                    <p class="font-bold text-xl tracking-wide">MRC Nepal Org Foundation</p>
+                                    <p class="font-bold text-xl tracking-wide">{intlBankDetails.accountName}</p>
                                 </div>
                                 <div class="pb-4 border-b border-white/10">
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Bank Name</p>
-                                    <p class="font-bold text-xl tracking-wide">Standard Chartered Bank Nepal</p>
+                                    <p class="font-bold text-xl tracking-wide">{intlBankDetails.bankName}</p>
                                 </div>
                                 <div class="flex gap-4 pb-4 border-b border-white/10">
                                     <div class="flex-1">
                                         <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">SWIFT Code</p>
-                                        <p class="font-mono text-xl tracking-wide font-bold">SCBLNPKA</p>
+                                        <p class="font-mono text-xl tracking-wide font-bold">{intlBankDetails.swiftCode}</p>
                                     </div>
                                     <div class="flex-1 border-l border-white/10 pl-4">
                                         <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Routing No.</p>
-                                        <p class="font-mono text-xl tracking-wide font-bold">0104</p>
+                                        <p class="font-mono text-xl tracking-wide font-bold">{intlBankDetails.routingNo}</p>
                                     </div>
                                 </div>
                                 <div>
                                     <p class="text-white/60 text-sm mb-1 uppercase tracking-wider font-semibold">Account Number</p>
-                                    <p class="font-mono text-xl tracking-wide font-bold">88-2345-6789-01</p>
+                                    <p class="font-mono text-xl tracking-wide font-bold">{intlBankDetails.accountNumber}</p>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +246,13 @@ import { Icon } from 'astro-icon/components';
                     </a>
                 </p>
             </div>
+        </div>
+    </section>
+
+    <!-- GlobalGiving Integration Section -->
+    <section class="bg-gray-50 border-t border-gray-100">
+        <div class="wrapper max-w-7xl mx-auto">
+            <GlobalGivingProjects />
         </div>
     </section>
 </Layout>

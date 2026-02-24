@@ -1,6 +1,6 @@
 [
     {
-        "image": "/images/slider/1.png",
+        "image": "/images/slider/1.jpg",
         "badgeTheme": "bg-secondary/20 border-secondary/50 text-secondary",
         "badgeText": "Agriculture",
         "title": "Promoting Sustainable Livelihoods",
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "image": "/images/slider/2.png",
+        "image": "/images/slider/2.jpeg",
         "badgeTheme": "bg-secondary/20 border-secondary/50 text-secondary",
         "badgeText": "Health & Sanitation",
         "title": "Community Action to End TB",

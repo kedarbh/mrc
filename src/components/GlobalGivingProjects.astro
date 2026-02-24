@@ -1,0 +1,142 @@
+---
+import { Icon } from 'astro-icon/components';
+
+// GlobalGiving API Configuration
+const API_KEY = 'c952f179-a50f-452a-8161-983b0ceab98a';
+const ORG_ID = '29505';
+const API_URL = `https://api.globalgiving.org/api/public/projectservice/organizations/${ORG_ID}/projects/active?api_key=${API_KEY}`;
+
+let projects = [];
+let fetchError = null;
+
+try {
+  const response = await fetch(API_URL, {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`GlobalGiving API responded with status: ${response.status}`);
+  }
+
+  const data = await response.json();
+  
+  // Cleanly extract the projects array from the deeply nested GlobalGiving response
+  if (data && data.projects && data.projects.project) {
+    projects = Array.isArray(data.projects.project) 
+        ? data.projects.project 
+        : [data.projects.project]; // Handle single project case
+  }
+} catch (error) {
+  console.error("Error fetching GlobalGiving projects:", error);
+  fetchError = error.message;
+}
+---
+
+<div class="global-giving-projects py-16">
+  <div class="text-center mb-12">
+      <span class="inline-block py-1 px-3 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-bold text-xs mb-4 uppercase tracking-wider">
+          Global Projects
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Active Online Campaigns</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Support our verified, high-impact initiatives currently seeking global funding through GlobalGiving.</p>
+  </div>
+
+  {fetchError && (
+    <div class="bg-red-50 border border-red-100 text-red-600 p-6 rounded-2xl text-center max-w-2xl mx-auto">
+      <p class="font-medium">We're currently unable to load our active campaigns from GlobalGiving. Please try again later or use the direct bank transfer option above.</p>
+    </div>
+  )}
+
+  {!fetchError && projects.length === 0 && (
+     <div class="text-center p-12 bg-white rounded-3xl border border-gray-100 shadow-sm max-w-2xl mx-auto flex flex-col items-center">
+         <Icon name="folder" class="w-12 h-12 text-gray-300 mb-4" />
+         <p class="text-xl text-gray-600 font-medium">There are currently no active priority campaigns on GlobalGiving.</p>
+         <p class="text-gray-500 mt-2">However, you can still support our general fund using the direct transfer options above.</p>
+     </div>
+  )}
+
+  {!fetchError && projects.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project: any) => {
+        // Calculate funding progress
+        const goal = project.goal || 1;
+        const funding = project.funding || 0;
+        const progressPercentage = Math.min(Math.round((funding / goal) * 100), 100);
+        
+        // Extract a clean image URL (prefer large if available)
+        const imageUrl = project.image?.imagelink?.find((link: any) => link.size === 'large')?.url 
+                      || project.imageLink 
+                      || '/assets/images/about/about_featured.webp'; // Fallback
+
+        return (
+          <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col group">
+            <!-- Project Image -->
+            <div class="relative h-56 overflow-hidden bg-gray-100">
+               <img 
+                 src={imageUrl} 
+                 alt={project.title} 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 loading="lazy"
+               />
+               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+               <div class="absolute bottom-4 left-4 right-4">
+                  <span class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-2 shadow-sm">
+                      {project.themeName || project.themes?.theme?.[0]?.name || 'Community Project'}
+                  </span>
+               </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2 min-h-[3.5rem] group-hover:text-primary transition-colors">
+                <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                </a>
+              </h3>
+              
+              <p class="text-gray-600 text-sm line-clamp-3 mb-6 flex-grow leading-relaxed">
+                {project.summary}
+              </p>
+
+              <!-- Funding Progress Bar -->
+              <div class="mb-6 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                  <div class="flex justify-between text-sm mb-2 font-medium">
+                      <span class="text-gray-900">${funding.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})} Raised</span>
+                      <span class="text-secondary">${goal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})} Goal</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                    <div class="bg-primary h-2.5 rounded-full" style={`width: ${progressPercentage}%`}></div>
+                  </div>
+                  <div class="mt-2 text-right">
+                      <span class="text-xs font-bold text-gray-500">{progressPercentage}% Funded</span>
+                  </div>
+              </div>
+
+              <!-- Action Button -->
+              <a 
+                href={project.projectLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-primary w-full flex justify-center items-center py-4 gap-2 shadow-lg shadow-primary/20 text-md"
+              >
+                Donate via GlobalGiving <Icon name="arrow-right" class="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  )}
+
+  <!-- Verification Link -->
+  <div class="mt-12 text-center text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-center gap-2">
+      <Icon name="chart" class="w-5 h-5 text-gray-400" />
+      <span>MRC Nepal is a fully vetted and permanent partner of GlobalGiving.</span>
+      <a href="https://www.globalgiving.org/donate/29505/multi-dimensional-resource-center-nepal-mrc-nepal/" target="_blank" rel="noopener noreferrer" class="text-secondary font-bold hover:underline">
+          View Organization Profile &rarr;
+      </a>
+  </div>
+</div>
