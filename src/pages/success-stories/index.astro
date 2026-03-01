@@ -4,8 +4,10 @@ import { Image } from "astro:assets";
 
 import { getCollection } from "astro:content";
 
-const stories= await getCollection('stories');
-// console.log(stories)
+const allStories = await getCollection('stories');
+const stories = allStories.sort((a, b) => {
+    return new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime();
+});
 ---
 
 <Layout

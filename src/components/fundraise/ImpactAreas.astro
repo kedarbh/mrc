@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+<!-- Impact Areas -->
+<section id="impact-areas" class="py-24 bg-gray-50">
+    <div class="wrapper max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Direct Allocation</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6">Where Your Money Goes</h2>
+            <div class="w-24 h-1.5 bg-primary mx-auto mb-6 rounded-full"></div>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">When you donate to our general fund, we allocate the capital across our three high-priority thematic action areas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Impact Card 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 bg-primary/10 relative overflow-hidden flex items-center justify-center">
+                    <Icon name="briefcase" class="w-16 h-16 text-primary mix-blend-multiply opacity-50" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainable Livelihoods</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Funding seeds, modern agricultural tools, livestock, and vital market-linkage training for marginalized farming families to elevate their income brackets.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Impact Card 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 bg-blue-100 relative overflow-hidden flex items-center justify-center">
+                    <Icon name="location" class="w-16 h-16 text-blue-600 mix-blend-multiply opacity-50" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">WASH & Health</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Constructing desperately needed water catchment systems, community toilets, and organizing public health and sanitation camps in remote districts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Impact Card 3 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div class="h-48 bg-secondary/10 relative overflow-hidden flex items-center justify-center">
+                     <Icon name="chart" class="w-16 h-16 text-secondary mix-blend-multiply opacity-50" />
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Climate Adaptation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Financing bio-gas plant installations, launching community reforestation drives, and implementing robust disaster risk reduction (DRR) strategies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
